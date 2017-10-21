@@ -45,7 +45,7 @@
     <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script> <!-- Bootstrap v3.3.7 -->
     
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnQhOKfphc09FeAYL9ilJ3SE6idKWlT6M&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdehGANaOcGnAcQjXt9zP22I0nHmONJdw&callback=initMap">
     </script>
     <!--=== Scroll Effects js ===-->
     <script type="text/javascript" src="js/anijs-min.js"></script>

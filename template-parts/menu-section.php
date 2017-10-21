@@ -1,6 +1,12 @@
- <!-- ****************************************** -->
-    <!-- ************  Menu Section  ************** -->
-    <!-- ****************************************** -->
+<!-- ****************************************** -->
+<!-- ************  Menu Section  ************** -->
+<!-- ****************************************** -->
+<?php  
+    require_once 'functions/config.php';
+    $querym = "SELECT * FROM category where is_img='1' limit 4";
+    $resultm = $db->query($querym);
+    
+    ?>
     <section class="menu_section" id="menu">
         <div class="container-fluid">
             <h2 class="header-2 text-center" data-anijs="if: mouseover, do: swing animated">قائمة الطعام</h2>
@@ -12,253 +18,61 @@
                 <div class="col-md-8">
                      <div class="menu-tab">
 
-                       <!-- Nav tabs -->
-                       <ul class="nav nav-tabs" role="tablist">
-                         <li role="presentation" class="active"><a href="#lunch" aria-controls="lunch" role="tab" data-toggle="tab">Lunch                                             </a></li>
-                         <li role="presentation"><a href="#evening" aria-controls="evening" role="tab" data-toggle="tab">Evening</a></li>
-                         <li role="presentation"><a href="#drink" aria-controls="drink" role="tab" data-toggle="tab">Drink</a></li>
-                         <li role="presentation"><a href="#dinner" aria-controls="dinner" role="tab" data-toggle="tab">Dinner</a></li>
+                         <!-- Nav tabs -->
+                       <ul class="nav nav-tabs ab" role="tablist">
+                        <?php 
+                            $array_cats=array();
+                            $i=0;
+                            while ($rowm= $resultm->fetch_object()){
+                                $array_cats[$i]['id']=$rowm->id;
+                                $array_cats[$i]['slug']=$rowm->slug;
+                           
+                         ?>
+                         <li role="presentation" <?php if($i<1){ ?> class="active" <?php } ?>><a href="#<?php echo $rowm->slug;?>" aria-controls="<?php echo $rowm->slug;?>" role="tab" data-toggle="tab"><?php echo$rowm->arabic;?> </a></li>
+                         <?php $i++;} ?>
+                         
                        </ul>
 
                        <!-- Tab panes -->
-                       <div class="tab-content">
-                         <div role="tabpanel" class="tab-pane fade in active" id="lunch">
+                        <div class="tab-content">
+                        <?php foreach ($array_cats as $k=>$array_cat) {
+                            //print_r($array_cat);
+                            $cat_id=$array_cat['id'];
+                            $querym2 = "SELECT * FROM foods where cat_id='$cat_id' && img!='' limit 3";
+                            $resultm2 = $db->query($querym2);
+                         ?>
+                        
+                         <div role="tabpanel" class="tab-pane fade in <?php if($k<1){ ?> active <?php } ?>" id="<?php echo $array_cat['slug'];?>"> 
+                            <?php while ($rowm2 = $resultm2->fetch_object()){ ?>
                             <div class="row item">
                                 <div class="col-md-3 col-xs-3 set-full">
                                     <div class="img-crcl">
-                                        <img src="img/food1.jpg">
+                                        <img src="img/<?php echo $rowm2->img;?>">
                                     </div>
                                     
                                 </div>
                                 <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
+                                    <h3 class="header-3"><?php echo $rowm2->title;?></h3>
                                     <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
+                                        <?php echo $rowm2->detail;?> 
                                     </p>
                                 </div>
                                 <div class="col-md-3 col-xs-3 set-full">
                                     <div class="price-box">
-                                        $25
+                                        <?php echo $rowm2->price;?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food2.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food3.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                             
                          </div>
-                         <div role="tabpanel" class="tab-pane fade" id="evening">
-                             <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food1.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food2.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food3.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                         <div role="tabpanel" class="tab-pane fade" id="drink">
-                             <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food1.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food2.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food3.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                         <div role="tabpanel" class="tab-pane fade" id="dinner">
-                             <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food1.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food2.jpg">
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row item">
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="img-crcl">
-                                        <img src="img/food3.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6 set-full">
-                                    <h3 class="header-3">Fried Chicken</h3>
-                                    <p class="p-text-1">
-                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
-                                    </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3 set-full">
-                                    <div class="price-box">
-                                        $25
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                       </div>
+                         <?php } ?>
 
-                     </div>
-                     <a href="menu.html" class="view-more-btn">View More</a>
+                        </div>
+                        </div>
+
+    
+                     <a href="menu.php" class="view-more-btn">View More</a>
                 </div>
                 <div class="col-md-1">&nbsp;</div>
             </div>

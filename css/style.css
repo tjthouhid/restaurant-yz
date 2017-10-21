@@ -720,7 +720,8 @@ header {
         background-color: #ffffff;
         font: 700 20px "Futura";
         border: 0px;
-        color: #f4e488; }
+        color: #f4e488;
+        padding-bottom: 9px; }
         .menu-tab .nav li.active a::after, .menu-tab .nav li:hover a::after {
           background-color: #f4e488; }
       @media only screen and (max-width: 700px) {
@@ -729,6 +730,8 @@ header {
           width: 100%;
           text-align: center;
           padding: 0px; } }
+    .menu-tab .nav.ab li.active a, .menu-tab .nav.ab li:hover a {
+      padding-bottom: 11px; }
   .menu-tab .tab-content {
     margin-top: 60px; }
     @media only screen and (max-width: 680px) {
