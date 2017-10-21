@@ -23,7 +23,19 @@
           var n = $("header").height();
           
           $('html, body').animate({ scrollTop: n }, 500);
-    })
+    });
+     // nav scroll active class
+    $(".go-menu li a").click(function(event){   
+        
+        var dis=$(this);
+        if(dis.attr("href")[0]=="#"){
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+
+        }
+    });
+
+
 
 	/**
     * ----------------------------------------------
@@ -191,35 +203,44 @@
 
 
       // jQuery Validation
-      $("#contact_form").validate({
-        // if valid, post data via AJAX
-        submitHandler: function(form) {
-          $.post("send.php", { uname: $("#uname").val(), uphone: $("#uphone").val(), uselect: $("#uselect").val() }, function(data) {
-            $('.send-result').html(data);
-            $('.send-result').fadeIn(1000);
-            $('.send-result').slideUp(3000);
-            $("#contact_form")[0].reset()
+     $(".contact_form").validate({
+          // if valid, post data via AJAX
+          submitHandler: function(form) {
+              $.post("send.php", { uname: $("#uname2").val(), unumber: $("#unumber2").val(), udate: $("#udate2").val(), uperson: $("#uperson2").val() }, function(data) {
+                  $('.send-result2').html(data);
+                  $('.send-result2').fadeIn(1000);
+                  $('.send-result2').slideUp(3000);
+                  $(".contact_form")[0].reset()
 
-          });
-        },
-        // all fields are required
-        rules: {
-          name: {
-            required: true
+              });
           },
-          number: {
-            required: true
+          // all fields are required
+          rules: {
+              name: {
+                  required: true
+              },
+              number: {
+                  required: true
+              },
+              person: {
+                  required: true
+              },
+              date: {
+                  required: true,
+                  date: true
+              }
           },
-          date: {
-            required: true
-          },
-          uselect: {
-            required: true,
-            valueNotEquals :'-1'
+          messages: {
+              name : "هذه الخانة مطلوبه.",
+              number : "هذه الخانة مطلوبه.", 
+              person : "هذه الخانة مطلوبه.", 
+              date: {
+                  required : "هذه الخانة مطلوبه.",
+                  date  : "الرجاء إدخال التاريخ"
+              }
           }
-        }
       });
-
+        
 
       
      

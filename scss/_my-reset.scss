@@ -13,6 +13,9 @@ body {
     background-color: $white;
     @include scrollbars(.5em,  lighten($theme-color,20%));
 }
+.send-result,.send-result2{
+  display: none;
+}
 
 /**
  * ----------------------------------------------

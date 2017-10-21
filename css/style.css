@@ -92,6 +92,9 @@ body {
   body::-webkit-scrollbar-track {
     background: #b6f8f4; }
 
+.send-result, .send-result2 {
+  display: none; }
+
 /**
  * ----------------------------------------------
  * CUSTOM CLASS
