@@ -22,19 +22,19 @@
 			<div>
 				<table style='width:100%;'>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>الاسم : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>Name : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$name."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>رقم الهاتف : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>Phone : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$number."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>تاريخ الحجز : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>Date : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$date."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>عدد الحاضرين : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>No of person : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$person."</td>
 					</tr>
 					<tr>
@@ -57,10 +57,10 @@
 	$headers .= 'From: 	Mangiamo<'.$from . ">\r\n";
 
 	if(mail($to,$subject,$message,$headers)){
-		echo "شكرا لك، يتم إرسال رسالتك.";
+		echo "Thank you, your message is being sent.";
 		
 	}else{
-		echo "حدث خطأ أثناء المحاولة !";
+		echo "An error occurred while trying !";
 	}
 	exit;
 

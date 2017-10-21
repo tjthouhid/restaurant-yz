@@ -1,4 +1,4 @@
-<?php include "includes/header.php";?>
+ <?php include "includes/header.php"; ?>
             <div class="header-slider">
                 <div class="row">
                     <div class="col-md-2 slider-st">
@@ -16,14 +16,14 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <h1 class="header-1">أهلا بكم في منجيامو</h1>
-                                    <h3 class="header-3">احجز طاولتك الآن واحصل على خصم بقيمة 15 %</h3>
+                                    <h1 class="header-1">Welcome to Mangiamo.</h1>
+                                    <h3 class="header-3">Reserve Your table now and get 15% discount.</h3>
                                 </div>
                                 
                                 <div class="video-play-div" id="play-btn2" data-toggle="modal" data-target="#video_modal">
                                     <a href="javascript:void()"></a>
                                 </div>
-                                <span class="video-btn-sub">مشاهدة الفيديو</span>
+                                <span class="video-btn-sub">Watch Video</span>
                             </div>
                         </div>
                     </div> <!-- End of slider col-md-8 -->
@@ -55,3 +55,15 @@
     <?php include "template-parts/location-section.php"; ?>
 
     <?php include "includes/footer.php"; ?>
+
+   
+
+
+
+  
+
+ 
+  
+
+
+ 

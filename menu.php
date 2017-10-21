@@ -1,4 +1,10 @@
 <?php include "includes/header.php";?>
+<?php  
+require_once 'functions/config.php';
+$query = "SELECT * FROM category where is_img='1'";
+$result = $db->query($query);
+
+?>
             <div class="header-slider">
                 <div class="row">
                     <div class="col-md-2 slider-st">
@@ -40,851 +46,173 @@
      <!-- ******************************************************* -->
     <!-- ************  Menu Section  ************** -->
     <!-- ******************************************************* -->
-    <section class="single-menu-sec">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="img-bar">
-                        <img src="img/pizza.jpg">
+    <?php $i=0;while ($row = $result->fetch_object()) {
+        $cat_id=$row->id;
+        $query2 = "SELECT * FROM foods where cat_id='$cat_id'";
+        $result2 = $db->query($query2);
+        if($i%2==0){ 
+           
+            ?>
+            <section class="single-menu-sec">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="img-bar">
+                                <img src="img/<?php echo $row->img;?>">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="single-menu-bar">
+                                <h3 class="header-3V2"><?php echo $row->arabic;?></h3>
+                                <ul>
+                                    <?php $j=0;while ($row2 = $result2->fetch_object()){ if($j>2){ $cls="not-show";}else{ $cls="";} 
+                                    ?>
+                                    <li class="single-menu-item <?php echo $cls;?>">
+                                        <div class="row">
+                                            <div class="col-md-8 col-xs-8">
+                                                <h2 class="single-menu-header"><?php echo $row2->title;?></h2>
+                                            </div>
+                                            <div class="col-md-4 col-xs-4 price">
+                                                <?php echo $row2->price;?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="p-text-1">
+                                                    <?php echo $row2->detail;?> 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <?php $j++; } ?>
+                                    
+                                    
+                                </ul>
+                                <?php if($j>3){ ?>
+                                <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
+                                <?php } ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">Pizza</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
+            </section>
+        <?php } else { ?>
+               <section class="single-menu-sec">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 visible-xs-* visible-sm-* hidden-md hidden-lg">
+                                <div class="img-bar">
+                                    <img src="img/<?php echo $row->img;?>">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
+                            </div>
+                            <div class="col-md-1">&nbsp;</div>
+                            <div class="col-md-4">
+                            <div class="single-menu-bar">
+                                <h3 class="header-3V2"><?php echo $row->arabic;?></h3>
+                                <ul>
+                                    <?php $j=0;while ($row2 = $result2->fetch_object()){ if($j>2){ $cls="not-show";}else{ $cls="";} 
+                                    ?>
+                                    <li class="single-menu-item <?php echo $cls;?>">
+                                        <div class="row">
+                                            <div class="col-md-8 col-xs-8">
+                                                <h2 class="single-menu-header"><?php echo $row2->title;?></h2>
+                                            </div>
+                                            <div class="col-md-4 col-xs-4 price">
+                                                <?php echo $row2->price;?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="p-text-1">
+                                                    <?php echo $row2->detail;?> 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <?php $j++; } ?>
+                                    
+                                    
+                                </ul>
+                                <?php if($j>3){ ?>
+                                <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                            <div class="col-md-6 hidden-xs hidden-sm visible-md-* visible-lg-*">
+                                <div class="img-bar">
+                                    <img src="img/<?php echo $row->img;?>">
                                 </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>   
+                </section>
+        <?php } ?>            
+   
+    <?php $i++;} ?> 
+
+   
      <!-- ******************************************************* -->
-    <!-- ************  Menu Section  ************** -->
+    <!-- ************  Double row menu Section  ************** -->
     <!-- ******************************************************* -->
-    <section class="single-menu-sec">
-        <div class="container-fluid">
+    <?php 
+        $queryd = "SELECT * FROM category where is_img='0'";
+        $resultd = $db->query($queryd);
+    ?>
+    
+    <section class="single-menu-sec double-row-menu">
+        <div class="container-fluid fix">
             <div class="row">
-                <div class="col-md-6 visible-xs-* visible-sm-* hidden-md hidden-lg">
-                    <div class="img-bar">
-                        <img src="img/vegi.jpg">
-                    </div>
-                </div>
-                <div class="col-md-1">&nbsp;</div>
-                <div class="col-md-4">
+                <?php $i=0;while ($rowd = $resultd->fetch_object()) {
+                    $catd_id=$rowd->id;
+                    $queryd2 = "SELECT * FROM foods where cat_id='$catd_id'";
+                    $resultd2 = $db->query($queryd2);
+                    if($i%2==0){ ?>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="single-menu-sec double-row-menu">
+                        <div class="container-fluid fix">
+                            <div class="row">
+                    <?php } ?>
+                <div class="col-md-6">
                     <div class="single-menu-bar">
-                        <h3 class="header-3V2">Vegetable Plater</h3>
+                        <h3 class="header-3V2"><?php echo $rowd->arabic;?></h3>
                         <ul>
-                            <li class="single-menu-item">
+                            <?php $j=0;while ($rowd2 = $resultd2->fetch_object()){ if($j>2){ $cls="not-show";}else{ $cls="";} 
+                            ?>
+                            <li class="single-menu-item <?php echo $cls;?>">
                                 <div class="row">
                                     <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
+                                        <h2 class="single-menu-header"><?php echo $rowd2->title;?></h2>
                                     </div>
                                     <div class="col-md-4 col-xs-4 price">
-                                        $25
+                                        <?php echo $rowd2->price;?>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                                            <?php echo $rowd2->detail;?> 
                                         </p>
                                     </div>
                                 </div>
                             </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            <?php $j++; } ?>
+                            
+                            
                         </ul>
+                        <?php if($j>3){ ?>
                         <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 hidden-xs hidden-sm visible-md-* visible-lg-*">
-                    <div class="img-bar">
-                        <img src="img/vegi.jpg">
+                        <?php } ?>
                     </div>
                 </div>
 
+                <?php $i++;} ?> 
+                
             </div>
         </div>
     </section>
     
-
-     <!-- ******************************************************* -->
-    <!-- ************  Menu Section  ************** -->
-    <!-- ******************************************************* -->
-    <section class="single-menu-sec">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="img-bar">
-                        <img src="img/pawn.jpg">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">Prawn</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Malta ala pizza</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ******************************************************* -->
-    <!-- ************  Double row menu Section  ************** -->
-    <!-- ******************************************************* -->
-    <section class="single-menu-sec double-row-menu">
-        <div class="container-fluid fix">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">Red View</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Noddus Kababiya chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        
-                            
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">White View</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Noddus Kababiya chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        
-                            
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ******************************************************* -->
-    <!-- ************  Double row menu Section  ************** -->
-    <!-- ******************************************************* -->
-    <section class="single-menu-sec double-row-menu">
-        <div class="container-fluid fix">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">Red View</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Noddus Kababiya chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        
-                            
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single-menu-bar">
-                        <h3 class="header-3V2">White View</h3>
-                        <ul>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Noddus Kababiya chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-menu-item not-show">
-                                <div class="row">
-                                    <div class="col-md-8 col-xs-8">
-                                        <h2 class="single-menu-header">Chicken Kababiya with chips</h2>
-                                    </div>
-                                    <div class="col-md-4 col-xs-4 price">
-                                        $25
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p class="p-text-1">
-                                            The standard chunk of Lorem Ipsum used since the 
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        
-                            
-                        </ul>
-                        <a href="javascript:void(0);" class="view-more-btn show-more">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 <?php include "includes/footer.php"; ?>

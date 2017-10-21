@@ -18,7 +18,7 @@ function get_server_url($dev=false){
 
 $current_url=get_current_path();
 $site_url=get_server_url(true);
-
+$site_url.="en/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,16 +32,15 @@ $site_url=get_server_url(true);
     <title>Home - Mangiamo</title>
 
     <!--=== css fixed ===-->
-    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap v3.3.7 -->
-    <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css"> <!-- Bootstrap v3.3.7 -->
-    <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome V4.7.0 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> <!-- Bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.min.css"> <!-- Bootstrap v3.3.7 -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css"> <!-- Font Awesome V4.7.0 -->
    
    <!-- AniCollection.css library -->
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-    
 
     <!--=== custom css ===-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,6 +53,7 @@ $site_url=get_server_url(true);
 </head>
 <body>
   <?php include "includes/side-bar.php"; ?>
+    
 
     <!-- ****************************************** -->
     <!-- ************ Header Start  ************** -->
@@ -73,13 +73,13 @@ $site_url=get_server_url(true);
                     </div>
                 </div>
                 <div class="col-md-2 call-now">
-                    <i class="fa fa-phone" aria-hidden="true"></i> اتصل الآن :  <a href="tel:097124974010">097124974010</a>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Call Now :  <a href="tel:097124974010">097124974010</a>
                     
                 </div>
                 <div class="col-md-4 right-bar">
                     <div class="row">
                         <div class="col-md-8 col-xs-4 book-btn-bar">
-                            <a href="javascript:void(0);" class="book-btn-1" data-toggle="modal" data-target="#book_now_modal">حجز طاولة</a>
+                            <a href="javascript:void(0);" class="book-btn-1" data-toggle="modal" data-target="#book_now_modal">Book Now</a>
                         </div>
                         <div class="col-md-4 text-right">
                             <a href="javascript:void(0);" class="menu-openbtn">
@@ -99,10 +99,10 @@ $site_url=get_server_url(true);
                         </a>
                         <ul class="nav navbar-nav language-bar">
                             <li class="dropdown">
-                              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Arabic <span class="caret"></span></a>
+                              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo $site_url.$current_url;?>">Arabic</a></li>
-                                    <li><a href="<?php echo $site_url;?>en/<?php echo $current_url;?>">English</a></li>
+                                    <li><a href="<?php echo get_server_url(true).$current_url;?>">Arabic</a></li>
+                                    <li><a href="<?php echo $site_url;?><?php echo $current_url;?>">English</a></li>
                                 </ul>
                             </li>
                         </ul>

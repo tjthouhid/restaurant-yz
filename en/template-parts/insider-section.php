@@ -1,5 +1,4 @@
-
-    <!-- ******************************************************* -->
+   <!-- ******************************************************* -->
     <!-- ************  Restaurant Inside Section  ************** -->
     <!-- ******************************************************* -->
     <section class="inside_rest_sec">
@@ -7,9 +6,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="inside_div">
-                        <h2 class="header-2 text-center">داخل مانجيامو</h2>
-                        <p class="p-text-1 text-center">ألقي نظرة على مطعمنا, هنا حيث تجد الأناقة وفخامة المكان, مع الموظفين السعيدين بخدمتك
-يقع مانجيامو في نادي القوات المسلحة في قلب أبوظبي ويقدم لكم أجواء فريدة ستجعلك تعود اليها مرارا وتكرارا
+                        <h2 class="header-2 text-center">Inside our Restaurant</h2>
+                        <p class="p-text-1">
+                           Take a look inside our restaurant: here you’ll discover effortless elegance, attentive staff and Mediterranean style, and a bustling kitchen bursting with aromas from across the globe. Situated in the Armed Forces Club in the beating heart of Abu Dhabi, Mangiamo offers a unique atmosphere you’ll return to time and time again.
                         </p>
                     </div>
                 </div>
@@ -25,21 +24,21 @@
                        <div class="carousel-inner" role="listbox">
                            <div class="item active">
                                 <div class="slider-content">
-                                    <img src="img/im1.jpg">
+                                    <img src="../img/im1.jpg">
                                     <h5 class="header-5">Kitchen</h5>
                                 </div>
                                
                            </div>
                            <div class="item">
                                 <div class="slider-content">
-                                    <img src="img/im2.jpg">
+                                    <img src="../img/im2.jpg">
                                     <h5 class="header-5">Dining</h5>
                                 </div>
                                
                            </div>
                            <div class="item">
                                 <div class="slider-content">
-                                    <img src="img/im3.jpg">
+                                    <img src="../img/im3.jpg">
                                     <h5 class="header-5">Hotel</h5>
                                 </div>
                                

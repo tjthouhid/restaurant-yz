@@ -133,6 +133,8 @@ body {
 /*===== heading style 1 =====*/
 .header-1{
     @include font($Helvetica,400,45px);
+    unicode-bidi:bidi-override !important;
+
     //@include font($BerkshireSwash,700,45px);
 }
 /*===== heading style 2 =====*/
@@ -142,27 +144,33 @@ body {
     @include font($Helvetica,400,35px);
     color: $menu-color;
     margin-bottom: 40px;
+    unicode-bidi:bidi-override !important;
 
     
 }
 /*===== heading style 3 =====*/
 .header-3{
    @include font($Futura,400,25px);
+   unicode-bidi:bidi-override !important;
 }
 .header-3V2{
    @include font($Futura,500,25px);
+   unicode-bidi:bidi-override !important;
 }
 /*===== heading style 4 =====*/
 .header-4{ 
     @include font($Futura,700,19px);
+    unicode-bidi:bidi-override !important;
 }
 .header-5{   /*===== heading style 5 =====*/  
     @include font($BerkshireSwash,400,88px);
     color: $white;
+    unicode-bidi:bidi-override !important;
 }
 /*===== heading style 6 =====*/
 .header-6{ 
    @include font($Futura,500,16px);
+   unicode-bidi:bidi-override !important;
 }
 /*===== paragraph style 1 =====*/
 .p-text-1{
@@ -170,6 +178,7 @@ body {
     color: $menu-color;
     opacity: 0.7;
     line-height: 30px;
+    unicode-bidi:bidi-override !important;
 }
 /*! ===== link style =====*/
 .link-text{  

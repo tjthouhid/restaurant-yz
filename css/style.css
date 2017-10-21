@@ -204,40 +204,48 @@ body {
 
 /*===== heading style 1 =====*/
 .header-1 {
-  font: 400 45px "Helvetica"; }
+  font: 400 45px "Helvetica";
+  unicode-bidi: bidi-override !important; }
 
 /*===== heading style 2 =====*/
 .header-2 {
   font: 400 35px "Helvetica";
   color: #46484d;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  unicode-bidi: bidi-override !important; }
 
 /*===== heading style 3 =====*/
 .header-3 {
-  font: 400 25px "Futura"; }
+  font: 400 25px "Futura";
+  unicode-bidi: bidi-override !important; }
 
 .header-3V2 {
-  font: 500 25px "Futura"; }
+  font: 500 25px "Futura";
+  unicode-bidi: bidi-override !important; }
 
 /*===== heading style 4 =====*/
 .header-4 {
-  font: 700 19px "Futura"; }
+  font: 700 19px "Futura";
+  unicode-bidi: bidi-override !important; }
 
 .header-5 {
   /*===== heading style 5 =====*/
   font: 400 88px "BerkshireSwash";
-  color: #ffffff; }
+  color: #ffffff;
+  unicode-bidi: bidi-override !important; }
 
 /*===== heading style 6 =====*/
 .header-6 {
-  font: 500 16px "Futura"; }
+  font: 500 16px "Futura";
+  unicode-bidi: bidi-override !important; }
 
 /*===== paragraph style 1 =====*/
 .p-text-1 {
   font: 500 16px "Futura";
   color: #46484d;
   opacity: 0.7;
-  line-height: 30px; }
+  line-height: 30px;
+  unicode-bidi: bidi-override !important; }
 
 /*! ===== link style =====*/
 /*! ===== input field style =====*/

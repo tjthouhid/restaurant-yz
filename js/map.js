@@ -255,7 +255,7 @@
         map.setMapTypeId('map_style');
 
         var icon = {
-            url: "img/marker.png", // url
+            url: burl+"img/marker.png", // url
             //scaledSize: new google.maps.Size(40, 50), // scaled size
            // origin: new google.maps.Point(0,0), // origin
            // anchor: new google.maps.Point(0, 0) // anchor
