@@ -1,0 +1,188 @@
+/**
+ * ----------------------------------------------
+ * SIMPLE RESET
+ * ----------------------------------------------
+ */
+*{
+    @include font($OpenSans,400,16px);
+    @include box-sizing(border-box);
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $white;
+    @include scrollbars(.5em,  lighten($theme-color,20%));
+}
+
+/**
+ * ----------------------------------------------
+ * CUSTOM CLASS
+ * ----------------------------------------------
+ */
+
+.fix-container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    @include media-max(500px){
+        padding: 0 3%;
+    }
+    @include media-min-max(500px,800px){
+        padding: 0 3%;
+    }
+}
+.white-space{
+    height: 130px;
+    width: 100%;
+    @include media-min(1370px){
+        height: 160px;
+    }
+    @include media-max(500px){
+        height: 80px;
+    }
+    @include media-max(400px) {
+        height: 50px;
+    }
+}
+.fix{
+    margin: 0px;
+    padding: 0px;
+}
+.p-none{
+    padding: 0px;
+}
+.m-none{
+    margin: 0px;
+}
+.clear{
+    clear: both;
+}
+//@include transition(all .2s ease-in-out);
+//@include font($Montserrat,600,16px);
+/*! ===== button style =====*/
+.book-btn-1{
+   @include font($Futura,700,18px);
+   color: $white;
+   border: 1px solid $white;
+   @include border-top-radius(10px); 
+   @include border-bottom-radius(10px);
+   text-align: center;
+   padding: 20px 25px;
+   text-decoration: none;
+   // width: 170px;
+   display: inline-block;
+   &:hover,&:focus{
+    background-color: $logo-color;
+    text-decoration: none;
+    color: $white;
+    outline: 0px;
+   }
+}
+.book-btn-2{
+   @include font($Futura,700,16px);
+   color: $menu-color;
+   background-color: $white;
+   border: 1px solid #c4c5c6;
+   @include border-top-radius(10px); 
+   @include border-bottom-radius(10px);
+   text-align: center;
+   padding: 20px 0px;
+   text-decoration: none;
+   width: 236px;
+   display: block;
+   margin: 40px auto;
+   &:hover,&:focus{
+    background-color: $logo-color;
+    text-decoration: none;
+    color: $menu-color;
+    outline: 0px;
+   }
+}
+.view-more-btn{
+    @include font($Futura,700,13px);
+    color:$menu-color;
+    opacity: 0.75;
+    padding:30px 0px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    @include border-top-radius(8px); 
+    @include border-bottom-radius(8px);
+    background-color: $white;
+    -webkit-box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    &:hover,&:focus{
+        color:$menu-color;
+        background-color: $logo-color;
+        text-decoration: none;
+        outline: 0px;
+
+    }
+
+    &:active{
+        color:#aeafb1;
+    }
+}
+
+
+/*===== heading style 1 =====*/
+.header-1{
+    @include font($Helvetica,400,45px);
+    //@include font($BerkshireSwash,700,45px);
+}
+/*===== heading style 2 =====*/
+.header-2{
+
+    //@include font($BerkshireSwash,400,35px);
+    @include font($Helvetica,400,35px);
+    color: $menu-color;
+    margin-bottom: 40px;
+
+    
+}
+/*===== heading style 3 =====*/
+.header-3{
+   @include font($Futura,400,25px);
+}
+.header-3V2{
+   @include font($Futura,500,25px);
+}
+/*===== heading style 4 =====*/
+.header-4{ 
+    @include font($Futura,700,19px);
+}
+.header-5{   /*===== heading style 5 =====*/  
+    @include font($BerkshireSwash,400,88px);
+    color: $white;
+}
+/*===== heading style 6 =====*/
+.header-6{ 
+   @include font($Futura,500,16px);
+}
+/*===== paragraph style 1 =====*/
+.p-text-1{
+   @include font($Futura,500,16px);
+    color: $menu-color;
+    opacity: 0.7;
+    line-height: 30px;
+}
+/*! ===== link style =====*/
+.link-text{  
+   
+}
+/*! ===== input field style =====*/
+.input-field{ 
+    border: 1px solid $p-text-color;
+    padding: 12px;
+    border-radius: 5px;
+    //@include font($Montserrat,400,14px);
+    &:hover,&:focus{
+        &::placeholder { 
+            color: $p-text-color;
+            opacity: 1;
+            @include transition(all .2s ease-in-out);
+        }
+    }
+}

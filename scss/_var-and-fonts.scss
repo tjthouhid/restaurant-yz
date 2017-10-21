@@ -1,0 +1,68 @@
+/**
+ * ----------------------------------------------
+ * COLOR CODES
+ * ----------------------------------------------
+ *
+*/
+
+$white:                 #ffffff;
+$black:                 #000000;
+$logo-color:            #f4e488;
+$menu-color:            #46484d;
+$theme-color:           #17e0d4;
+$dot-color:             #737673;
+$tab-nav-color:         #afafaf;
+
+
+$title-text-color:      #2e3c40;
+$p-text-color:          #616161;
+$primary:               #FF6192;
+
+$color2:                #b1b1b1;
+$color3:                #555555;
+$footer-bg:             #252525;
+$copyright-bg:             #212121;
+
+
+
+/**
+ * ----------------------------------------------
+ * Font face
+ * 
+ */
+
+
+$Helvetica: "Helvetica";
+// Montserrat Display Font
+@include font-face($Helvetica, '../fonts/HelveticaRegular', 400, normal);
+
+$BerkshireSwash: "BerkshireSwash";
+// Montserrat Display Font
+@include font-face($BerkshireSwash, '../fonts/BerkshireSwashRegular', 400, normal);
+
+
+$Montez: "Montez";
+// Montserrat Display Font
+@include font-face($Montez, '../fonts/MontezRegular', 400, normal);
+
+
+
+
+$Futura: "Futura";
+// Montserrat Display Font
+@include font-face($Futura, '../fonts/FuturaBold', 700, normal);
+@include font-face($Futura, '../fonts/Futura', 600, normal);
+@include font-face($Futura, '../fonts/Futura', 500, normal);
+@include font-face($Futura, '../fonts/FuturaOblique', 400, normal);
+
+$Future: "Future";
+@include font-face($Future, '../fonts/FutureOblique', 400, normal);
+
+
+
+$OpenSans: "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+// OpenSans Display Font
+@include font-face($OpenSans, '/fonts/OpenSans-Light', 100, normal);
+@include font-face($OpenSans, '/fonts/OpenSans-Regular', 400, normal);
+@include font-face($OpenSans, '/fonts/OpenSans-SemiBold', 600, normal);
+@include font-face($OpenSans, '/fonts/OpenSans-Bold', 700, normal);

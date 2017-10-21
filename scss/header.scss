@@ -1,0 +1,400 @@
+
+
+
+/******************************
+---------Header Css ---------- 
+********************************/
+header{
+	width: 100%;
+	padding: 40px 0px 0px 0px;
+	position: relative;
+	overflow: hidden;
+
+	&.header-with-bg{
+
+		//transform: translateX(-50%) translateY(-50%);
+		background: url('../img/header-bg.jpg') no-repeat;
+		background-position: 0px 0px;
+	 	background-size: cover;
+	 	transition: 1s opacity;
+		@include media-max(767px) {
+			// For Mobile spped up use small image
+			//background-image: url(images/background-photo-mobile-devices.jpg);
+		}
+		video { 
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    min-width: 100%;
+		    min-height: 100%;
+		    width: auto;
+		    height: auto;
+		    z-index: -100;
+		    transform: translateX(-50%) translateY(-50%);
+		 	background: url('../img/header-bg.jpg') no-repeat;
+		 	background-position: 0px 0px;
+		  	background-size: cover;
+		  	transition: 1s opacity;
+		}
+		&.landing-bg{
+			background-image: url('../img/landing-bg.jpg');
+		}
+		&.menu-bg{
+			background-image: url('../img/menu-page-bg.jpg');
+			.header-6{
+				max-width: 500px;
+				text-align: center;
+				display: block;
+				margin: 40px auto 0px;
+			}
+		}
+
+	}
+	.logo{
+		a{
+			@include font($Helvetica,400,32px);
+			color: $logo-color;
+			text-decoration: none;
+		}
+		
+		padding-left: 50px;
+		@include media-max(700px){
+			padding-left: 0px;
+		}
+	}
+	.left-bar{
+		@include media-max(700px){
+        	float: inherit;
+        	display: block;
+        	width: 100%;
+        	
+    	}
+	}
+	.right-bar{
+
+		@include media-max(700px){
+			//width: 100%;
+			//text-align: center;
+		}
+		.book-btn-bar{
+			@include media-max(700px){
+				margin-top: 40px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		
+	}
+	.language-bar{
+		position: fixed;
+    	top: 40px;
+        right: 20px;
+        @include media-max(1150px){
+			right: 20px;
+			top: 42px;
+		}
+        @include media-max(700px){
+			
+			top: 30px;
+		}
+		li{
+			a{
+				color: $white;
+				text-decoration: none;
+				&:hover{
+					background-color: transparent;
+					color: $logo-color;
+				}
+			}
+			&.open{
+				a{
+					background-color: transparent;
+					border: 1px solid $logo-color;
+					&:focus{
+						background-color: transparent;
+						border: 1px solid $logo-color;
+					}
+					&:hover{
+						background-color: transparent;
+						color: $logo-color;
+						border: 1px solid $logo-color;
+					}
+				}
+			}
+			.dropdown-menu{
+				background-color: rgba(0,0,0,0.8);
+				border: 0px;
+				box-shadow: inherit;
+				@include media-max(767px){
+					position: fixed !important;
+				
+				}
+				li{
+					a{
+						border: 0px;
+						&:hover{
+							border: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.menu-openbtn{
+				color: $white;
+				text-decoration: none;
+				position: relative;
+    			top: 10px;
+    			right: 100px;
+    			@include media-max(1150px){
+					right: 80px;
+    			}
+    			@include media-max(700px){
+    				position: absolute;
+    				//right: 40px;
+    				top: -38px;
+    			}
+    			@include media-max(767px){
+    				right: 100px;
+    			}
+    			
+    			svg{
+    				&:hover{
+    					.menu_icon{
+    						fill:$logo-color;
+    						}
+    					}
+    				.menu_icon{
+    					fill:$white;
+    					fill-rule: evenodd;
+		    			@include transition(all .5s ease-in-out);
+    				}
+       			}
+			}
+	&.header-with-out-bg{
+		.menu-openbtn{
+			svg{
+				&:hover{
+					.menu_icon{
+						fill:$logo-color;
+						}
+					}
+				.menu_icon{
+					fill:$menu-color;
+					fill-rule: evenodd;
+	    			@include transition(all .5s ease-in-out);
+				}
+   			}
+		}
+		
+		.text-right{
+			height: 60px;
+		}
+		
+	}
+
+	.nav-fixed{
+		position: fixed;
+		width: 100%;
+		background-color: rgba(0,0,0,0.6);
+		top: 0px;
+		left: 0px;
+		height: 80px;
+		z-index: 999;
+		.menu-openbtn{
+			top: 25px;
+			@include media-max(1150px){
+					right: 120px;
+					position: fixed;
+    			}
+		}
+		.logo{
+			position: relative;
+			    top: 20px;
+			
+		}
+		.language-bar{
+			top: 20px;
+		}
+		.book-btn-1{
+			display: none;
+		}
+		.call-now{
+			@include media-max(992px){
+				position: inherit;
+				top: inherit;
+				left: inherit;
+			}
+			@include media-max(600px){
+				display: none;
+			}
+		}
+	}
+
+	.reserv_div_text_2{
+	    	max-width: 800px;
+	    	margin: 40px auto;
+	    	text-align: center;
+	    	@include font($Futura,400,25px);
+	    	.contact-no{
+	    		@include font($Futura,400,25px);
+	    		color: $white;
+	    		text-decoration: none;
+	    		&:hover{
+					color: $logo-color;
+	    		}
+	    	}
+	    	.book-btn-2{
+	    		background-color: transparent;
+	    		color: $white;
+	    		display: inline-block;
+	    		&:hover{
+	    			color: $logo-color;
+	    		}
+	    	}
+	    	.book-date-text{
+	    		@include font($Futura,700,25px);
+	    		color: $white;
+	    		span{
+					@include font($Futura,500,25px);
+	    		}
+	    	}
+	    }
+	
+}
+
+
+/******************************
+---------Header slider Css ---------- 
+********************************/
+
+.header-slider{
+	color: $white;
+	text-align: center;
+	margin-top: 180px;
+	padding-bottom: 100px;
+	@include media-max(700px){
+		margin-top: 40px;
+	}
+	
+	.video-play-div{
+		padding-top: 19px;
+		width: 60px;
+		height: 60px;
+		margin: 25px auto 0px;
+		text-align: center;
+		background-color: rgba(244,228,136,0.4);
+		@include border-top-radius(40px);
+		@include border-bottom-radius(40px);
+		cursor: pointer;
+		z-index: 999;
+		position: relative;
+
+		a{
+			@include triangle(12px, $logo-color, down);
+			display: inline-block;
+			@include transform(scale(0.9) rotate(-90deg));
+		}
+			
+	}
+	.video-btn-sub{
+		@include font($Futura,700,14px);
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.carousel-indicators{
+		position:inherit;
+		width: 100%;
+	    padding-left: 50px;
+	    margin-left: 0px;
+	    text-align: left;
+	    margin-top:120px;
+	    @include media-max(1050px){
+	    	text-align: center;
+	    }
+	    left: inherit;
+	    li{
+	    	cursor: pointer;
+	    	@include transition(all 0.3s ease-in-out);
+	    		border: 0px;
+	    		background-color: $dot-color;
+	    		width: 8px;
+	    		height: 8px;
+	    		display: block;
+	    		margin-bottom: 15px;
+	    		@include media-max(1050px){
+	    			display: inline-block;
+	    			margin-bottom: 0px;
+	    			margin-right: 15px;
+	    		}
+	    		&.active{
+	    				width: 12px;
+	    				height: 12px;
+	    				border: 2px solid $logo-color;
+	    				background-color: transparent;
+	    				margin-bottom: 30px;
+	    				@include media-max(1050px){
+	    					margin-bottom: 0px;
+	    					margin-right: 30px;
+	    				}
+	    			}
+	    	}
+	   
+	}
+	.slider-st{
+		@include media-max(1050px){
+		width: 100%;
+
+		}
+	}
+	
+}
+.scroll-down-btn{
+	@include transform(scale(0.9) rotate(90deg));
+	cursor: pointer;
+	@include font($Futura,400,16px);
+	display: block;
+	margin-top: 120px;
+	margin-bottom: 40px;
+	@include media-max(1050px){
+		width: 100%;
+
+	}
+
+	&::before {
+	    content: "";
+	    width: 40px;
+	    height: 2px;
+	    background-color: #fff;
+	    display: inline-block;
+	    margin-bottom: 4px;
+	    margin-right: 10px;
+	}
+}
+
+.call-now{
+	color :$white;
+	padding: 22px 0px 0px 0px;
+	a{
+		color: $white;
+		text-decoration: none;
+		&:hover{
+			color: $logo-color;
+		}
+	}
+	@include media-max(992px){
+		width: 100%;
+		position: absolute;
+	    text-align: center;
+	    top: 100px;
+	    left: 87px;
+	}
+	@include media-max(700px){
+		top: 170px;
+		left: -5px;
+
+	}
+}

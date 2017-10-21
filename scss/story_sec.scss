@@ -1,0 +1,56 @@
+.story_section{
+	background-image: url("../img/story-bg.jpg");
+		
+		//background-attachment: fixed;
+		background-position: 0px 0px;
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    background-color: $white;
+	    //min-height: 779px;
+	    display: block;
+	    margin: 100px 0px;
+	    padding-bottom: 220px;
+	    @include media-max(767px) {
+	    	padding-bottom: 80px;
+	    }
+	    @include media-max(400px) {
+	    	padding-bottom: 40px;
+	    }
+	    .story_div{
+	    	max-width: 682px;
+	    	width: 100%;
+	    	margin:0px auto;
+	    	h2{
+	    		background-image: url("../img/story-sd.png");
+		    	background-position: 0px 0px;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			   // background-color: $white;
+		    	padding: 132px 0px 0px;
+    			height: 397px;
+    			 @include media-max(767px) {
+			    	 background-size: 100%;
+			    	 padding: 80px 0px 0px;
+			    	 //height: 325px;
+			    }
+			    @include media-max(500px) {
+			    	padding: 65px 0px 0px;
+			    	 height: 240px;
+			    }
+
+	    	}
+	    	.p-text-1{
+	    		margin-top: -60px;
+	    		 @include media-max(767px) {
+			    	margin-top: -80px;
+			    }
+			     @include media-max(500px) {
+			    	margin-top: -80px;
+			    }
+
+	    	}
+		    
+	    }
+		
+		
+}

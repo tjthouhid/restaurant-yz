@@ -1,0 +1,131 @@
+.reservation-sec{
+	background: url('../img/res-bg.jpg') no-repeat;
+	background-position: center 0px;
+	background-size: cover;
+	@include media-max(767px){
+		background-position: center center;
+	}
+
+}
+.reserv_div{
+		max-width: 900px;
+    	width: 100%;
+    	margin:170px auto;
+    	h2{
+    		background-image: url("../img/reservation-sd.png");
+    		background-position: 0px 0px;
+    		background-repeat: no-repeat;
+    		background-size: 100%;
+	    	padding: 120px 0px 0px;
+			height: 210px;
+			
+		    @include media-max(767px) {
+		    	padding: 65px 0px 0px;
+		    	 height: 210px;
+		    }
+		     @include media-max(500px) {
+		    	  padding: 30px 0px 0px;
+		    }
+
+    	}
+    .reserv_div_text{
+    	max-width: 450px;
+		margin: -60px auto 0px;
+		background: transparent;
+		padding: 5px 20px;
+		@include media-max(767px) {
+	    	margin: -110px auto 0px;
+	    }
+		@include media-max(500px) {
+	    	margin: -120px auto 0px;
+	    }
+    }
+
+    .reserv_div_text_2{
+        	max-width: 800px;
+        	margin: 40px auto;
+        	text-align: center;
+        	@include font($Futura,400,25px);
+        	.contact-no{
+        		@include font($Futura,400,25px);
+        		color: $menu-color;
+        		text-decoration: none;
+        		&:hover{
+    				color: $logo-color;
+        		}
+        	}
+        	
+        	.book-date-text{
+        		@include font($Futura,700,25px);
+        		color: $menu-color;
+        		span{
+    				@include font($Futura,500,25px);
+        		}
+        	}
+        }
+    
+    	
+}
+
+.reservation-sec{
+	&.landing-page{
+		background-image: inherit;
+		position: relative;
+		padding-bottom: 250px;
+		@include media-max(992px){
+			padding-bottom: 20px;
+		}
+		.reserv_div{
+			margin:10px auto;
+			h2{
+				background-image: url("../img/mangiamo-sd.png");
+				background-size: 737px 100%;
+				padding: 85px 0px 0px;
+				height: 244px;
+
+			}
+			.reserv_div_text{
+				max-width: inherit;
+				margin-top: -140px;
+			}
+			.reserv_div_text_2{
+				max-width: inherit;
+				.book-btn-2{
+					display: inline-block;
+				}
+			}
+		}
+
+		.res-left-side-img{
+			background-image: url("../img/res-left.png");
+    		background-position: 0px 0px;
+    		background-repeat: no-repeat;
+    		background-size: 100%;
+    		width: 180px;
+    		height: 455px;
+    		display: block;
+    		position: absolute;
+    		left: 0px;
+			bottom: 0px;
+			@include media-max(992px){
+				display: none;
+			}
+    	}
+	.res-right-side-img{
+			background-image: url("../img/res-right.png");
+    		background-position: 0px 0px;
+    		background-repeat: no-repeat;
+    		background-size: 100%;
+    		width: 320px;
+    		height: 460px;
+    		display: block;
+    		position: absolute;
+    		right: 0px;
+			bottom: 0px;
+			@include media-max(992px){
+				display: none;
+			}
+    	}
+	}
+}
+

@@ -1,0 +1,49 @@
+
+.sidenav {
+    height: 100%; 
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 9999999; 
+    top: 0;
+    right: 0;
+    background-color: $white; 
+    overflow-x: hidden;
+    padding-top: 50px; /* Place content 60px from the top */
+    //transition: 0.5s;
+    @include transition(all .5s ease-in-out);
+    .menu-closebtn{
+        color: $white;
+        background-color: $menu-color;
+        padding: 5px 8px;
+        font-size: 12px;
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 30px;
+        display: block;
+        float: right;
+        margin-right: 25px;
+        text-decoration: none;
+        &:hover{
+            background-color: $logo-color;
+        }
+    }
+    .menu{
+        padding: 166px 0px 0px 60px;
+        list-style: none;
+        li{
+            margin: 12px 10px;
+            &.active,&:hover{
+                a{
+                    color: $logo-color;
+                }
+            }
+            a{
+                @include font($Helvetica,400,18px);
+                text-decoration: none;
+                color: $menu-color;
+                @include transition(all 0.3s ease-in-out);
+            }
+        }
+    }
+}

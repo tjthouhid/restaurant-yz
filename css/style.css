@@ -1,0 +1,1406 @@
+/**
+ * ----------------------------------------------
+ * COLOR CODES
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * Font face
+ * 
+ */
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaRegular.woff2") format("woff2"), url("../fonts/HelveticaRegular.woff") format("woff"), url("../fonts/HelveticaRegular.ttf") format("truetype"), url("../fonts/HelveticaRegular.svg#Helvetica") format("svg"); }
+@font-face {
+  font-family: "BerkshireSwash";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/BerkshireSwashRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BerkshireSwashRegular.woff2") format("woff2"), url("../fonts/BerkshireSwashRegular.woff") format("woff"), url("../fonts/BerkshireSwashRegular.ttf") format("truetype"), url("../fonts/BerkshireSwashRegular.svg#BerkshireSwash") format("svg"); }
+@font-face {
+  font-family: "Montez";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MontezRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontezRegular.woff2") format("woff2"), url("../fonts/MontezRegular.woff") format("woff"), url("../fonts/MontezRegular.ttf") format("truetype"), url("../fonts/MontezRegular.svg#Montez") format("svg"); }
+@font-face {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/FuturaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaBold.woff2") format("woff2"), url("../fonts/FuturaBold.woff") format("woff"), url("../fonts/FuturaBold.ttf") format("truetype"), url("../fonts/FuturaBold.svg#Futura") format("svg"); }
+@font-face {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Futura.eot?#iefix") format("embedded-opentype"), url("../fonts/Futura.woff2") format("woff2"), url("../fonts/Futura.woff") format("woff"), url("../fonts/Futura.ttf") format("truetype"), url("../fonts/Futura.svg#Futura") format("svg"); }
+@font-face {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Futura.eot?#iefix") format("embedded-opentype"), url("../fonts/Futura.woff2") format("woff2"), url("../fonts/Futura.woff") format("woff"), url("../fonts/Futura.ttf") format("truetype"), url("../fonts/Futura.svg#Futura") format("svg"); }
+@font-face {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FuturaOblique.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaOblique.woff2") format("woff2"), url("../fonts/FuturaOblique.woff") format("woff"), url("../fonts/FuturaOblique.ttf") format("truetype"), url("../fonts/FuturaOblique.svg#Futura") format("svg"); }
+@font-face {
+  font-family: "Future";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FutureOblique.eot?#iefix") format("embedded-opentype"), url("../fonts/FutureOblique.woff2") format("woff2"), url("../fonts/FutureOblique.woff") format("woff"), url("../fonts/FutureOblique.ttf") format("truetype"), url("../fonts/FutureOblique.svg#Future") format("svg"); }
+@font-face {
+  font-family: "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  src: url("/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-Light.woff2") format("woff2"), url("/fonts/OpenSans-Light.woff") format("woff"), url("/fonts/OpenSans-Light.ttf") format("truetype"), url("/fonts/OpenSans-Light.svg#OpenSans, Helvetica, Roboto, Arial, sans-serif") format("svg"); }
+@font-face {
+  font-family: "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff"), url("/fonts/OpenSans-Regular.ttf") format("truetype"), url("/fonts/OpenSans-Regular.svg#OpenSans, Helvetica, Roboto, Arial, sans-serif") format("svg"); }
+@font-face {
+  font-family: "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/fonts/OpenSans-SemiBold.woff") format("woff"), url("/fonts/OpenSans-SemiBold.ttf") format("truetype"), url("/fonts/OpenSans-SemiBold.svg#OpenSans, Helvetica, Roboto, Arial, sans-serif") format("svg"); }
+@font-face {
+  font-family: "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff"), url("/fonts/OpenSans-Bold.ttf") format("truetype"), url("/fonts/OpenSans-Bold.svg#OpenSans, Helvetica, Roboto, Arial, sans-serif") format("svg"); }
+/**
+ * ----------------------------------------------
+ * SIMPLE RESET
+ * ----------------------------------------------
+ */
+* {
+  font: 400 16px "OpenSans", "Helvetica", "Roboto", "Arial", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #ffffff; }
+  body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em; }
+  body::-webkit-scrollbar-thumb {
+    background: #6df0e8; }
+  body::-webkit-scrollbar-track {
+    background: #b6f8f4; }
+
+/**
+ * ----------------------------------------------
+ * CUSTOM CLASS
+ * ----------------------------------------------
+ */
+.fix-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 500px) {
+    .fix-container {
+      padding: 0 3%; } }
+  @media only screen and (min-width: 500px) and (max-width: 800px) {
+    .fix-container {
+      padding: 0 3%; } }
+
+.white-space {
+  height: 130px;
+  width: 100%; }
+  @media only screen and (min-width: 1370px) {
+    .white-space {
+      height: 160px; } }
+  @media only screen and (max-width: 500px) {
+    .white-space {
+      height: 80px; } }
+  @media only screen and (max-width: 400px) {
+    .white-space {
+      height: 50px; } }
+
+.fix {
+  margin: 0px;
+  padding: 0px; }
+
+.p-none {
+  padding: 0px; }
+
+.m-none {
+  margin: 0px; }
+
+.clear {
+  clear: both; }
+
+/*! ===== button style =====*/
+.book-btn-1 {
+  font: 700 18px "Futura";
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  display: inline-block; }
+  .book-btn-1:hover, .book-btn-1:focus {
+    background-color: #f4e488;
+    text-decoration: none;
+    color: #ffffff;
+    outline: 0px; }
+
+.book-btn-2 {
+  font: 700 16px "Futura";
+  color: #46484d;
+  background-color: #ffffff;
+  border: 1px solid #c4c5c6;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  padding: 20px 0px;
+  text-decoration: none;
+  width: 236px;
+  display: block;
+  margin: 40px auto; }
+  .book-btn-2:hover, .book-btn-2:focus {
+    background-color: #f4e488;
+    text-decoration: none;
+    color: #46484d;
+    outline: 0px; }
+
+.view-more-btn {
+  font: 700 13px "Futura";
+  color: #46484d;
+  opacity: 0.75;
+  padding: 30px 0px;
+  width: 200px;
+  display: block;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 80px -15px rgba(0, 0, 0, 0.6);
+  text-decoration: none; }
+  .view-more-btn:hover, .view-more-btn:focus {
+    color: #46484d;
+    background-color: #f4e488;
+    text-decoration: none;
+    outline: 0px; }
+  .view-more-btn:active {
+    color: #aeafb1; }
+
+/*===== heading style 1 =====*/
+.header-1 {
+  font: 400 45px "Helvetica"; }
+
+/*===== heading style 2 =====*/
+.header-2 {
+  font: 400 35px "Helvetica";
+  color: #46484d;
+  margin-bottom: 40px; }
+
+/*===== heading style 3 =====*/
+.header-3 {
+  font: 400 25px "Futura"; }
+
+.header-3V2 {
+  font: 500 25px "Futura"; }
+
+/*===== heading style 4 =====*/
+.header-4 {
+  font: 700 19px "Futura"; }
+
+.header-5 {
+  /*===== heading style 5 =====*/
+  font: 400 88px "BerkshireSwash";
+  color: #ffffff; }
+
+/*===== heading style 6 =====*/
+.header-6 {
+  font: 500 16px "Futura"; }
+
+/*===== paragraph style 1 =====*/
+.p-text-1 {
+  font: 500 16px "Futura";
+  color: #46484d;
+  opacity: 0.7;
+  line-height: 30px; }
+
+/*! ===== link style =====*/
+/*! ===== input field style =====*/
+.input-field {
+  border: 1px solid #616161;
+  padding: 12px;
+  border-radius: 5px; }
+  .input-field:hover::placeholder, .input-field:focus::placeholder {
+    color: #616161;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+
+/******************************
+---------Header Css ---------- 
+********************************/
+header {
+  width: 100%;
+  padding: 40px 0px 0px 0px;
+  position: relative;
+  overflow: hidden; }
+  header.header-with-bg {
+    background: url("../img/header-bg.jpg") no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    transition: 1s opacity; }
+    header.header-with-bg video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      background: url("../img/header-bg.jpg") no-repeat;
+      background-position: 0px 0px;
+      background-size: cover;
+      transition: 1s opacity; }
+    header.header-with-bg.landing-bg {
+      background-image: url("../img/landing-bg.jpg"); }
+    header.header-with-bg.menu-bg {
+      background-image: url("../img/menu-page-bg.jpg"); }
+      header.header-with-bg.menu-bg .header-6 {
+        max-width: 500px;
+        text-align: center;
+        display: block;
+        margin: 40px auto 0px; }
+  header .logo {
+    padding-left: 50px; }
+    header .logo a {
+      font: 400 32px "Helvetica";
+      color: #f4e488;
+      text-decoration: none; }
+    @media only screen and (max-width: 700px) {
+      header .logo {
+        padding-left: 0px; } }
+  @media only screen and (max-width: 700px) {
+    header .left-bar {
+      float: inherit;
+      display: block;
+      width: 100%; } }
+  @media only screen and (max-width: 700px) {
+    header .right-bar .book-btn-bar {
+      margin-top: 40px;
+      width: 100%;
+      text-align: center; } }
+  header .language-bar {
+    position: fixed;
+    top: 40px;
+    right: 20px; }
+    @media only screen and (max-width: 1150px) {
+      header .language-bar {
+        right: 20px;
+        top: 42px; } }
+    @media only screen and (max-width: 700px) {
+      header .language-bar {
+        top: 30px; } }
+    header .language-bar li a {
+      color: #ffffff;
+      text-decoration: none; }
+      header .language-bar li a:hover {
+        background-color: transparent;
+        color: #f4e488; }
+    header .language-bar li.open a {
+      background-color: transparent;
+      border: 1px solid #f4e488; }
+      header .language-bar li.open a:focus {
+        background-color: transparent;
+        border: 1px solid #f4e488; }
+      header .language-bar li.open a:hover {
+        background-color: transparent;
+        color: #f4e488;
+        border: 1px solid #f4e488; }
+    header .language-bar li .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 0px;
+      box-shadow: inherit; }
+      @media only screen and (max-width: 767px) {
+        header .language-bar li .dropdown-menu {
+          position: fixed !important; } }
+      header .language-bar li .dropdown-menu li a {
+        border: 0px; }
+        header .language-bar li .dropdown-menu li a:hover {
+          border: 0px; }
+  header .menu-openbtn {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+    right: 100px; }
+    @media only screen and (max-width: 1150px) {
+      header .menu-openbtn {
+        right: 80px; } }
+    @media only screen and (max-width: 700px) {
+      header .menu-openbtn {
+        position: absolute;
+        top: -38px; } }
+    @media only screen and (max-width: 767px) {
+      header .menu-openbtn {
+        right: 100px; } }
+    header .menu-openbtn svg:hover .menu_icon {
+      fill: #f4e488; }
+    header .menu-openbtn svg .menu_icon {
+      fill: #ffffff;
+      fill-rule: evenodd;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  header.header-with-out-bg .menu-openbtn svg:hover .menu_icon {
+    fill: #f4e488; }
+  header.header-with-out-bg .menu-openbtn svg .menu_icon {
+    fill: #46484d;
+    fill-rule: evenodd;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  header.header-with-out-bg .text-right {
+    height: 60px; }
+  header .nav-fixed {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    z-index: 999; }
+    header .nav-fixed .menu-openbtn {
+      top: 25px; }
+      @media only screen and (max-width: 1150px) {
+        header .nav-fixed .menu-openbtn {
+          right: 120px;
+          position: fixed; } }
+    header .nav-fixed .logo {
+      position: relative;
+      top: 20px; }
+    header .nav-fixed .language-bar {
+      top: 20px; }
+    header .nav-fixed .book-btn-1 {
+      display: none; }
+    @media only screen and (max-width: 992px) {
+      header .nav-fixed .call-now {
+        position: inherit;
+        top: inherit;
+        left: inherit; } }
+    @media only screen and (max-width: 600px) {
+      header .nav-fixed .call-now {
+        display: none; } }
+  header .reserv_div_text_2 {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font: 400 25px "Futura"; }
+    header .reserv_div_text_2 .contact-no {
+      font: 400 25px "Futura";
+      color: #ffffff;
+      text-decoration: none; }
+      header .reserv_div_text_2 .contact-no:hover {
+        color: #f4e488; }
+    header .reserv_div_text_2 .book-btn-2 {
+      background-color: transparent;
+      color: #ffffff;
+      display: inline-block; }
+      header .reserv_div_text_2 .book-btn-2:hover {
+        color: #f4e488; }
+    header .reserv_div_text_2 .book-date-text {
+      font: 700 25px "Futura";
+      color: #ffffff; }
+      header .reserv_div_text_2 .book-date-text span {
+        font: 500 25px "Futura"; }
+
+/******************************
+---------Header slider Css ---------- 
+********************************/
+.header-slider {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 180px;
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 700px) {
+    .header-slider {
+      margin-top: 40px; } }
+  .header-slider .video-play-div {
+    padding-top: 19px;
+    width: 60px;
+    height: 60px;
+    margin: 25px auto 0px;
+    text-align: center;
+    background-color: rgba(244, 228, 136, 0.4);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+    z-index: 999;
+    position: relative; }
+    .header-slider .video-play-div a {
+      height: 0;
+      width: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #f4e488;
+      display: inline-block;
+      -webkit-transform: scale(0.9) rotate(-90deg);
+      -moz-transform: scale(0.9) rotate(-90deg);
+      -ms-transform: scale(0.9) rotate(-90deg);
+      -o-transform: scale(0.9) rotate(-90deg);
+      transform: scale(0.9) rotate(-90deg); }
+  .header-slider .video-btn-sub {
+    font: 700 14px "Futura";
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; }
+  .header-slider .carousel-indicators {
+    position: inherit;
+    width: 100%;
+    padding-left: 50px;
+    margin-left: 0px;
+    text-align: left;
+    margin-top: 120px;
+    left: inherit; }
+    @media only screen and (max-width: 1050px) {
+      .header-slider .carousel-indicators {
+        text-align: center; } }
+    .header-slider .carousel-indicators li {
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border: 0px;
+      background-color: #737673;
+      width: 8px;
+      height: 8px;
+      display: block;
+      margin-bottom: 15px; }
+      @media only screen and (max-width: 1050px) {
+        .header-slider .carousel-indicators li {
+          display: inline-block;
+          margin-bottom: 0px;
+          margin-right: 15px; } }
+      .header-slider .carousel-indicators li.active {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #f4e488;
+        background-color: transparent;
+        margin-bottom: 30px; }
+        @media only screen and (max-width: 1050px) {
+          .header-slider .carousel-indicators li.active {
+            margin-bottom: 0px;
+            margin-right: 30px; } }
+  @media only screen and (max-width: 1050px) {
+    .header-slider .slider-st {
+      width: 100%; } }
+
+.scroll-down-btn {
+  -webkit-transform: scale(0.9) rotate(90deg);
+  -moz-transform: scale(0.9) rotate(90deg);
+  -ms-transform: scale(0.9) rotate(90deg);
+  -o-transform: scale(0.9) rotate(90deg);
+  transform: scale(0.9) rotate(90deg);
+  cursor: pointer;
+  font: 400 16px "Futura";
+  display: block;
+  margin-top: 120px;
+  margin-bottom: 40px; }
+  @media only screen and (max-width: 1050px) {
+    .scroll-down-btn {
+      width: 100%; } }
+  .scroll-down-btn::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 10px; }
+
+.call-now {
+  color: #ffffff;
+  padding: 22px 0px 0px 0px; }
+  .call-now a {
+    color: #ffffff;
+    text-decoration: none; }
+    .call-now a:hover {
+      color: #f4e488; }
+  @media only screen and (max-width: 992px) {
+    .call-now {
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 100px;
+      left: 87px; } }
+  @media only screen and (max-width: 700px) {
+    .call-now {
+      top: 170px;
+      left: -5px; } }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 50px;
+  /* Place content 60px from the top */
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .sidenav .menu-closebtn {
+    color: #ffffff;
+    background-color: #46484d;
+    padding: 5px 8px;
+    font-size: 12px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    display: block;
+    float: right;
+    margin-right: 25px;
+    text-decoration: none; }
+    .sidenav .menu-closebtn:hover {
+      background-color: #f4e488; }
+  .sidenav .menu {
+    padding: 166px 0px 0px 60px;
+    list-style: none; }
+    .sidenav .menu li {
+      margin: 12px 10px; }
+      .sidenav .menu li.active a, .sidenav .menu li:hover a {
+        color: #f4e488; }
+      .sidenav .menu li a {
+        font: 400 18px "Helvetica";
+        text-decoration: none;
+        color: #46484d;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+
+.story_section {
+  background-image: url("../img/story-bg.jpg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #ffffff;
+  display: block;
+  margin: 100px 0px;
+  padding-bottom: 220px; }
+  @media only screen and (max-width: 767px) {
+    .story_section {
+      padding-bottom: 80px; } }
+  @media only screen and (max-width: 400px) {
+    .story_section {
+      padding-bottom: 40px; } }
+  .story_section .story_div {
+    max-width: 682px;
+    width: 100%;
+    margin: 0px auto; }
+    .story_section .story_div h2 {
+      background-image: url("../img/story-sd.png");
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 132px 0px 0px;
+      height: 397px; }
+      @media only screen and (max-width: 767px) {
+        .story_section .story_div h2 {
+          background-size: 100%;
+          padding: 80px 0px 0px; } }
+      @media only screen and (max-width: 500px) {
+        .story_section .story_div h2 {
+          padding: 65px 0px 0px;
+          height: 240px; } }
+    .story_section .story_div .p-text-1 {
+      margin-top: -60px; }
+      @media only screen and (max-width: 767px) {
+        .story_section .story_div .p-text-1 {
+          margin-top: -80px; } }
+      @media only screen and (max-width: 500px) {
+        .story_section .story_div .p-text-1 {
+          margin-top: -80px; } }
+
+.menu_section {
+  padding-bottom: 100px; }
+  .menu_section .menu-side {
+    position: relative; }
+    .menu_section .menu-side .text-shadow {
+      font: 400 227px "Montez";
+      -webkit-transform: scale(0.9) rotate(-90deg);
+      -moz-transform: scale(0.9) rotate(-90deg);
+      -ms-transform: scale(0.9) rotate(-90deg);
+      -o-transform: scale(0.9) rotate(-90deg);
+      transform: scale(0.9) rotate(-90deg);
+      color: #46484d;
+      opacity: 0.07;
+      text-align: center;
+      margin-top: 360px; }
+      @media only screen and (max-width: 1000px) {
+        .menu_section .menu-side .text-shadow {
+          margin-top: 0px;
+          -webkit-transform: scale(0.9) rotate(0deg);
+          -moz-transform: scale(0.9) rotate(0deg);
+          -ms-transform: scale(0.9) rotate(0deg);
+          -o-transform: scale(0.9) rotate(0deg);
+          transform: scale(0.9) rotate(0deg);
+          position: absolute; } }
+      @media only screen and (max-width: 700px) {
+        .menu_section .menu-side .text-shadow {
+          display: none; } }
+
+@media only screen and (max-width: 700px) {
+  .view-more-btn {
+    margin: 0px auto; } }
+
+.menu-tab {
+  margin-bottom: 80px; }
+  .menu-tab .nav {
+    border-bottom: 0px; }
+    .menu-tab .nav li {
+      border-bottom: 1px solid #afafaf;
+      padding-right: 90px; }
+      .menu-tab .nav li:last-child {
+        padding-right: 0px; }
+      .menu-tab .nav li a {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        font: 600 20px "Futura";
+        color: #afafaf;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        .menu-tab .nav li a::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: #afafaf;
+          display: inline-block;
+          position: absolute;
+          bottom: -1px;
+          left: 0px; }
+      .menu-tab .nav li.active a, .menu-tab .nav li:hover a {
+        background-color: #ffffff;
+        font: 700 20px "Futura";
+        border: 0px;
+        color: #f4e488; }
+        .menu-tab .nav li.active a::after, .menu-tab .nav li:hover a::after {
+          background-color: #f4e488; }
+      @media only screen and (max-width: 700px) {
+        .menu-tab .nav li {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 0px; } }
+  .menu-tab .tab-content {
+    margin-top: 60px; }
+    @media only screen and (max-width: 680px) {
+      .menu-tab .tab-content {
+        max-width: 300px;
+        margin: 60px auto; } }
+    .menu-tab .tab-content .tab-pane {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      .menu-tab .tab-content .tab-pane .item {
+        padding: 20px 0px;
+        color: #46484d; }
+        .menu-tab .tab-content .tab-pane .item::after {
+          clear: both;
+          content: "";
+          display: table; }
+        @media only screen and (max-width: 680px) {
+          .menu-tab .tab-content .tab-pane .item .set-full {
+            display: block;
+            width: 100%;
+            float: inherit; } }
+        .menu-tab .tab-content .tab-pane .item .img-crcl {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          overflow: hidden; }
+          .menu-tab .tab-content .tab-pane .item .img-crcl img {
+            width: 100%;
+            height: auto; }
+        .menu-tab .tab-content .tab-pane .item .price-box {
+          font: 400 30px "Futura";
+          border-top: 1px solid #e6e6e6;
+          border-bottom: 1px solid #e6e6e6;
+          margin: 20px 0px;
+          padding: 40px 25px; }
+
+.single-menu-sec {
+  padding: 40px 60px; }
+  .single-menu-sec ul {
+    list-style: none;
+    margin: 0px 0px 40px 0px;
+    padding: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .single-menu-sec ul li {
+      display: block; }
+  .single-menu-sec .img-bar {
+    padding: 100px; }
+    @media only screen and (max-width: 768px) {
+      .single-menu-sec .img-bar {
+        padding: 0px; } }
+    .single-menu-sec .img-bar img {
+      width: 100%;
+      height: auto; }
+  .single-menu-sec .single-menu-bar {
+    padding: 10px 20px; }
+    .single-menu-sec .single-menu-bar .single-menu-item {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      .single-menu-sec .single-menu-bar .single-menu-item.not-show {
+        display: none; }
+      .single-menu-sec .single-menu-bar .single-menu-item .single-menu-header {
+        font: 700 25px "Futura"; }
+      .single-menu-sec .single-menu-bar .single-menu-item .price {
+        font: 500 20px "Futura";
+        text-align: right;
+        margin-top: 20px; }
+      .single-menu-sec .single-menu-bar .single-menu-item .p-text-1 {
+        opacity: 0.5; }
+  .single-menu-sec .mobile-show {
+    display: none; }
+
+.double-row-menu {
+  border-top: 1px solid #eeeeef;
+  margin: 0px 100px;
+  padding: 40px 0px; }
+  @media only screen and (max-width: 400px) {
+    .double-row-menu {
+      margin: 0px 10px; } }
+  .double-row-menu .single-menu-bar {
+    padding: 40px 0px; }
+
+.reservation-sec {
+  background: url("../img/res-bg.jpg") no-repeat;
+  background-position: center 0px;
+  background-size: cover; }
+  @media only screen and (max-width: 767px) {
+    .reservation-sec {
+      background-position: center center; } }
+
+.reserv_div {
+  max-width: 900px;
+  width: 100%;
+  margin: 170px auto; }
+  .reserv_div h2 {
+    background-image: url("../img/reservation-sd.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 120px 0px 0px;
+    height: 210px; }
+    @media only screen and (max-width: 767px) {
+      .reserv_div h2 {
+        padding: 65px 0px 0px;
+        height: 210px; } }
+    @media only screen and (max-width: 500px) {
+      .reserv_div h2 {
+        padding: 30px 0px 0px; } }
+  .reserv_div .reserv_div_text {
+    max-width: 450px;
+    margin: -60px auto 0px;
+    background: transparent;
+    padding: 5px 20px; }
+    @media only screen and (max-width: 767px) {
+      .reserv_div .reserv_div_text {
+        margin: -110px auto 0px; } }
+    @media only screen and (max-width: 500px) {
+      .reserv_div .reserv_div_text {
+        margin: -120px auto 0px; } }
+  .reserv_div .reserv_div_text_2 {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font: 400 25px "Futura"; }
+    .reserv_div .reserv_div_text_2 .contact-no {
+      font: 400 25px "Futura";
+      color: #46484d;
+      text-decoration: none; }
+      .reserv_div .reserv_div_text_2 .contact-no:hover {
+        color: #f4e488; }
+    .reserv_div .reserv_div_text_2 .book-date-text {
+      font: 700 25px "Futura";
+      color: #46484d; }
+      .reserv_div .reserv_div_text_2 .book-date-text span {
+        font: 500 25px "Futura"; }
+
+.reservation-sec.landing-page {
+  background-image: inherit;
+  position: relative;
+  padding-bottom: 250px; }
+  @media only screen and (max-width: 992px) {
+    .reservation-sec.landing-page {
+      padding-bottom: 20px; } }
+  .reservation-sec.landing-page .reserv_div {
+    margin: 10px auto; }
+    .reservation-sec.landing-page .reserv_div h2 {
+      background-image: url("../img/mangiamo-sd.png");
+      background-size: 737px 100%;
+      padding: 85px 0px 0px;
+      height: 244px; }
+    .reservation-sec.landing-page .reserv_div .reserv_div_text {
+      max-width: inherit;
+      margin-top: -140px; }
+    .reservation-sec.landing-page .reserv_div .reserv_div_text_2 {
+      max-width: inherit; }
+      .reservation-sec.landing-page .reserv_div .reserv_div_text_2 .book-btn-2 {
+        display: inline-block; }
+  .reservation-sec.landing-page .res-left-side-img {
+    background-image: url("../img/res-left.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 180px;
+    height: 455px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px; }
+    @media only screen and (max-width: 992px) {
+      .reservation-sec.landing-page .res-left-side-img {
+        display: none; } }
+  .reservation-sec.landing-page .res-right-side-img {
+    background-image: url("../img/res-right.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 320px;
+    height: 460px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px; }
+    @media only screen and (max-width: 992px) {
+      .reservation-sec.landing-page .res-right-side-img {
+        display: none; } }
+
+.testimonial_sec {
+  position: relative;
+  padding-bottom: 80px; }
+  .testimonial_sec .testi_div {
+    margin: 100px auto 40px;
+    max-width: 1100px; }
+    @media only screen and (max-width: 992px) {
+      .testimonial_sec .testi_div {
+        max-width: 700px; } }
+    .testimonial_sec .testi_div h2 {
+      background-image: url("../img/test-sd.png");
+      background-position: center 0px;
+      background-repeat: no-repeat;
+      background-size: 492px 210px;
+      padding: 85px 0px 0px;
+      height: 210px; }
+      @media only screen and (max-width: 767px) {
+        .testimonial_sec .testi_div h2 {
+          height: 210px; } }
+      @media only screen and (max-width: 530px) {
+        .testimonial_sec .testi_div h2 {
+          padding: 70px 0px 0px;
+          background-size: 100%; } }
+  .testimonial_sec .test-left-side-img {
+    background-image: url("../img/plate.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 220px;
+    height: 330px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 50px;
+    z-index: -1; }
+  .testimonial_sec .test-right-side-img {
+    background-image: url("../img/burger.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 220px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1; }
+
+.testimonial-slide .testimonial-box {
+  padding: 50px;
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #ffffff;
+  margin: 60px 3px; }
+  .testimonial-slide .testimonial-box .user-pic {
+    width: 83px;
+    height: 82px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px; }
+    .testimonial-slide .testimonial-box .user-pic img {
+      width: 100%;
+      height: 100%; }
+  .testimonial-slide .testimonial-box .rattings {
+    margin: 20px 0px; }
+
+.test-carousel-indicators {
+  position: inherit;
+  width: 100%;
+  padding-left: 50px;
+  margin-left: 0px;
+  text-align: left;
+  margin-top: 200px;
+  left: inherit; }
+  @media only screen and (max-width: 992px) {
+    .test-carousel-indicators {
+      text-align: center;
+      margin-top: 0px; } }
+  .test-carousel-indicators li {
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 2px solid #ffffff;
+    background-color: #737673;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    display: block;
+    margin-bottom: 15px; }
+    @media only screen and (max-width: 992px) {
+      .test-carousel-indicators li {
+        display: inline-block;
+        margin-bottom: 0px;
+        margin-right: 15px; } }
+    .test-carousel-indicators li.active {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #f4e488;
+      background-color: transparent;
+      margin-bottom: 30px; }
+      @media only screen and (max-width: 992px) {
+        .test-carousel-indicators li.active {
+          margin-bottom: 0px;
+          margin-right: 30px; } }
+
+.ratting.rated .rcircle {
+  fill: none;
+  stroke: #f4e488;
+  stroke-width: 3px; }
+.ratting.rated .rdot {
+  fill: #f4e488; }
+.ratting .rcircle {
+  fill: none;
+  stroke: #46484d;
+  stroke-width: 3px; }
+.ratting .rdot {
+  fill: #46484d; }
+
+.inside_rest_sec .inside_div {
+  margin: 20px auto 40px;
+  padding: 10px 40px;
+  max-width: 800px; }
+  @media only screen and (max-width: 992px) {
+    .inside_rest_sec .inside_div {
+      max-width: 700px;
+      padding: 10px 0px;
+      margin-bottom: 0px; } }
+  .inside_rest_sec .inside_div h2 {
+    background-image: url("../img/inside-sd.png");
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 650px 100%;
+    padding: 85px 0px 0px;
+    height: 180px; }
+    @media only screen and (max-width: 767px) {
+      .inside_rest_sec .inside_div h2 {
+        height: 180px;
+        background-size: 100%;
+        padding: 70px 0px 0px; } }
+    @media only screen and (max-width: 530px) {
+      .inside_rest_sec .inside_div h2 {
+        height: 100px;
+        padding: 30px 0px 0px;
+        background-size: 100%; } }
+  .inside_rest_sec .inside_div .p-text-1 {
+    padding: 5px 30px; }
+    @media only screen and (max-width: 530px) {
+      .inside_rest_sec .inside_div .p-text-1 {
+        margin-top: -80px;
+        display: none; } }
+
+.inside-slider .item .slider-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  max-height: 638px; }
+  .inside-slider .item .slider-content img {
+    width: 100%;
+    height: auto; }
+  .inside-slider .item .slider-content .header-5 {
+    position: absolute;
+    top: 40%;
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .inside-slider .item .slider-content .header-5 {
+        top: 20%; } }
+    @media only screen and (max-width: 500px) {
+      .inside-slider .item .slider-content .header-5 {
+        font-size: 45px; } }
+
+.inside-carousel-indicators {
+  position: inherit;
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  left: inherit; }
+  .inside-carousel-indicators li {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    background-color: #737673;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    margin-right: 15px;
+    cursor: pointer; }
+    .inside-carousel-indicators li.active {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #f4e488;
+      background-color: transparent;
+      margin-right: 30px; }
+
+.instagram_sec .instagram_div {
+  margin: 100px auto 40px;
+  padding: 10px 40px;
+  max-width: 1100px; }
+  @media only screen and (max-width: 992px) {
+    .instagram_sec .instagram_div {
+      max-width: 700px;
+      padding: 10px 0px; } }
+  .instagram_sec .instagram_div h2 {
+    background-image: url("../img/instagram-sd.png");
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 745px 100%;
+    padding: 85px 0px 0px;
+    height: 249px; }
+    @media only screen and (max-width: 767px) {
+      .instagram_sec .instagram_div h2 {
+        height: 249px;
+        background-size: 100%;
+        padding: 70px 0px 0px; } }
+    @media only screen and (max-width: 530px) {
+      .instagram_sec .instagram_div h2 {
+        padding: 30px 0px 0px; } }
+  .instagram_sec .instagram_div .p-text-1 {
+    text-align: center;
+    margin-top: -150px;
+    padding: 5px 30px; }
+    @media only screen and (max-width: 530px) {
+      .instagram_sec .instagram_div .p-text-1 {
+        margin-top: -160px; } }
+.instagram_sec .instra-images {
+  margin-top: 80px; }
+  .instagram_sec .instra-images .instra-img-show {
+    margin: 20px auto 0px;
+    width: 100%;
+    overflow: hidden;
+    height: auto; }
+    .instagram_sec .instra-images .instra-img-show img {
+      width: 100%;
+      height: auto; }
+    .instagram_sec .instra-images .instra-img-show:hover {
+      opacity: 0.5; }
+
+.location_sec .location_div {
+  margin: 100px auto 40px; }
+  @media only screen and (max-width: 992px) {
+    .location_sec .location_div {
+      max-width: 700px;
+      padding: 10px 0px; } }
+  .location_sec .location_div h2 {
+    background-image: url("../img/location-sd.png");
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: 588px 100%;
+    padding: 85px 0px 0px;
+    height: 190px; }
+    @media only screen and (max-width: 530px) {
+      .location_sec .location_div h2 {
+        padding: 40px 0px 0px;
+        background-size: 100%; } }
+  .location_sec .location_div .p-text-1 {
+    text-align: center;
+    margin-top: -150px;
+    padding: 5px 30px; }
+    @media only screen and (max-width: 530px) {
+      .location_sec .location_div .p-text-1 {
+        margin-top: -160px; } }
+.location_sec .order-form {
+  max-width: 467px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.6); }
+  @media only screen and (max-width: 467px) {
+    .location_sec .order-form {
+      position: inherit;
+      top: inherit;
+      right: inherit;
+      margin: 20px auto; } }
+  .location_sec .order-form h6 {
+    text-align: center;
+    font: 500 25px "Futura";
+    color: #000000;
+    opacity: 0.9; }
+  .location_sec .order-form form {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    padding: 40px 40px 80px;
+    text-align: center; }
+    .location_sec .order-form form .booking-input {
+      padding: 15px 24px;
+      margin: 5px 0px;
+      border: 1px solid #f4f4f4;
+      width: 100%;
+      font: 400 15px "Futura"; }
+    .location_sec .order-form form .booking-select {
+      padding: 15px 24px;
+      margin: 5px 0px;
+      border: 1px solid #f4f4f4;
+      width: 100%;
+      font: 400 15px "Futura";
+      background-color: #ffffff;
+      height: 46px;
+      -webkit-appearance: none; }
+    .location_sec .order-form form .booking-submit {
+      font: 600 15px "Futura";
+      color: #ffffff;
+      background-color: #46484d;
+      border: 0px;
+      padding: 20px 0px;
+      width: 162px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      position: absolute;
+      bottom: -28px;
+      left: 150px; }
+      @media only screen and (max-width: 467px) {
+        .location_sec .order-form form .booking-submit {
+          left: 100px; } }
+      .location_sec .order-form form .booking-submit:hover {
+        color: #f4e488; }
+
+.map-div {
+  position: relative;
+  margin: 0px 40px; }
+  @media only screen and (max-width: 600px) {
+    .map-div {
+      margin: 0px 0px; } }
+
+#map {
+  height: 400px;
+  display: block;
+  width: 100%;
+  margin-bottom: 60px; }
+
+footer {
+  max-width: 800px;
+  margin: 40px auto 0;
+  border-top: 1px solid #eeeeef; }
+
+.social-icon {
+  text-align: center;
+  margin: 60px auto 20px; }
+  .social-icon ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto; }
+    .social-icon ul li {
+      display: inline-block;
+      margin: 0px 10px; }
+      .social-icon ul li a {
+        color: #46484d;
+        opacity: 0.7;
+        padding: 10px 0px;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        border: 1px solid #46484d;
+        text-decoration: none; }
+      .social-icon ul li:hover a {
+        background-color: #46484d;
+        color: #ffffff;
+        opacity: 1;
+        text-decoration: none; }
+
+.footer-nav {
+  margin: 20px auto 20px; }
+  .footer-nav ul {
+    list-style: none;
+    margin: 0px auto;
+    text-align: center; }
+    .footer-nav ul li {
+      display: inline-block;
+      margin: 0px 10px; }
+      .footer-nav ul li a {
+        color: #46484d;
+        opacity: 0.8;
+        font: 400 15px "Futura";
+        text-decoration: none; }
+      .footer-nav ul li:hover a {
+        color: #f4e488;
+        text-decoration: none; }
+
+.footer-sign {
+  text-align: center; }
+  .footer-sign p {
+    color: #46484d;
+    opacity: 0.3;
+    font: 400 15px "Futura"; }
+    .footer-sign p a {
+      color: #46484d;
+      opacity: 0.8;
+      font: 400 15px "Futura"; }
+      .footer-sign p a:hover {
+        color: #f4e488; }
+
+#book_now_modal .modal-content {
+  background: transparent;
+  box-shadow: inherit;
+  border: 0px; }
+#book_now_modal .order-form {
+  max-width: 467px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(216, 216, 216, 0.5);
+  margin: 0px auto;
+  background-color: #ffffff; }
+  #book_now_modal .order-form .close {
+    z-index: 99;
+    position: relative; }
+  #book_now_modal .order-form h6 {
+    text-align: center;
+    font: 500 25px "Futura";
+    color: #000000;
+    opacity: 0.9; }
+  #book_now_modal .order-form form {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    padding: 40px 40px 80px;
+    text-align: center; }
+    #book_now_modal .order-form form .booking-input {
+      padding: 15px 24px;
+      margin: 5px 0px;
+      border: 1px solid #f4f4f4;
+      width: 100%;
+      font: 400 15px "Futura"; }
+    #book_now_modal .order-form form .booking-select {
+      padding: 15px 24px;
+      margin: 5px 0px;
+      border: 1px solid #f4f4f4;
+      width: 100%;
+      font: 400 15px "Futura";
+      background-color: #ffffff;
+      height: 46px;
+      -webkit-appearance: none; }
+    #book_now_modal .order-form form .booking-submit {
+      font: 600 15px "Futura";
+      color: #ffffff;
+      background-color: #46484d;
+      border: 0px;
+      padding: 20px 0px;
+      width: 162px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      position: absolute;
+      bottom: -28px;
+      left: 150px; }
+      @media only screen and (max-width: 467px) {
+        #book_now_modal .order-form form .booking-submit {
+          left: 100px; } }
+      #book_now_modal .order-form form .booking-submit:hover {
+        color: #f4e488; }
+
+#video_modal .modal-content {
+  background: transparent;
+  box-shadow: inherit;
+  border: 0px; }
+  #video_modal .modal-content .modal-body {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0; }
+    #video_modal .modal-content .modal-body iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+/*# sourceMappingURL=style.css.map */
