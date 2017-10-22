@@ -22,7 +22,7 @@ $result = $db->query($query);
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <h1 class="header-1">أهلا بكم في منجيامو</h1>
-                                    <h6 class="header-6">حجز طاولتك الآن واحصل على خصم بقيمة 15 %</h6>
+                                    <h6 class="header-6">% حجز طاولتك الآن واحصل على خصم بقيمة 15</h6>
                                 </div>
                                 
                                

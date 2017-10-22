@@ -1,23 +1,5 @@
 <?php 
-function get_current_path(){
- $complete_path = $_SERVER['SCRIPT_FILENAME'];
- $url_arry=array_reverse(explode("/", $complete_path)); 
- return $url_arry[0];
-}
-function get_server_url($dev=false){
-  $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-   if($dev==true){
-    $folder="restaurant-yz/";
-   }else{
-    $folder="";
-   }
-  $url = $protocol . $_SERVER['HTTP_HOST'] ."/".$folder;
-  return $url; // Outputs: Full URL
-}
-
-
-$current_url=get_current_path();
-$site_url=get_server_url(true);
+include "functions/common.php";
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +19,7 @@ $site_url=get_server_url(true);
     <link rel="stylesheet" href="css/font-awesome.min.css"> <!-- Font Awesome V4.7.0 -->
    
    <!-- AniCollection.css library -->
-    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
 
     <!--=== custom css ===-->
     <link rel="stylesheet" href="css/style.css">
@@ -126,7 +108,7 @@ $site_url=get_server_url(true);
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                      <h1 class="header-1">أهلا بكم في منجيامو</h1>
-                                    <h3 class="header-3">احجز طاولتك الآن واحصل على خصم بقيمة 15 %</h3>
+                                    <h3 class="header-3">% احجز طاولتك الآن واحصل على خصم بقيمة 15 </h3>
                                 </div>
                                 
                                 <div class="reserv_div_text_2">

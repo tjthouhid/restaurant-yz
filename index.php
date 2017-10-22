@@ -17,7 +17,7 @@
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <h1 class="header-1">أهلا بكم في منجيامو</h1>
-                                    <h3 class="header-3">احجز طاولتك الآن واحصل على خصم بقيمة 15 %</h3>
+                                    <h3 class="header-3">% احجز طاولتك الآن واحصل على خصم بقيمة 15 </h3>
                                 </div>
                                 
                                 <div class="video-play-div" id="play-btn2" data-toggle="modal" data-target="#video_modal">
