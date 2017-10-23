@@ -340,7 +340,7 @@ header {
       box-shadow: inherit; }
       @media only screen and (max-width: 767px) {
         header .language-bar li .dropdown-menu {
-          position: fixed !important; } }
+          max-width: 98px; } }
       header .language-bar li .dropdown-menu li a {
         border: 0px; }
         header .language-bar li .dropdown-menu li a:hover {
@@ -1232,7 +1232,7 @@ header {
       width: 100%;
       font: 400 15px "Futura";
       background-color: #ffffff;
-      height: 46px;
+      height: 60px;
       -webkit-appearance: none; }
     .location_sec .order-form form .booking-submit {
       font: 600 15px "Futura";
@@ -1371,7 +1371,7 @@ footer {
       width: 100%;
       font: 400 15px "Futura";
       background-color: #ffffff;
-      height: 46px;
+      height: 60px;
       -webkit-appearance: none; }
     #book_now_modal .order-form form .booking-submit {
       font: 600 15px "Futura";

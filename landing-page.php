@@ -108,11 +108,11 @@ include "functions/common.php";
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                      <h1 class="header-1">أهلا بكم في منجيامو</h1>
-                                    <h3 class="header-3">% احجز طاولتك الآن واحصل على خصم بقيمة 15 </h3>
+                                    <h3 class="header-3">احجز طاولتك الآن واحصل على خصم بقيمة %15 </h3>
                                 </div>
                                 
                                 <div class="reserv_div_text_2">
-                                    <a href="tel:097124974010" class="contact-no"><!--<i class="fa fa-phone" aria-hidden="true"></i> &nbsp;--> 097124974010</a> &nbsp; Or &nbsp; 
+                                    <a href="tel:0097124974010" class="contact-no"><!--<i class="fa fa-phone" aria-hidden="true"></i> &nbsp;--> 0097124974010</a> &nbsp; Or &nbsp; 
                                     <a href="javascript:void(0);" class="book-btn-2" data-toggle="modal" data-target="#book_now_modal">حجز طاولة</a>
                                     <div class="book-date-text">
                                         <span>Mon-Fri -</span> 10am - 12pm   <span>Sat-Sun -</span>  10am - 12pm 

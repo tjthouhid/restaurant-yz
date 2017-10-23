@@ -112,7 +112,7 @@ $site_url.="en/";
                                 </div>
                                 
                                 <div class="reserv_div_text_2">
-                                    <a href="tel:097124974010" class="contact-no"><!--<i class="fa fa-phone" aria-hidden="true"></i> &nbsp;--> 097124974010</a> &nbsp; Or &nbsp; 
+                                    <a href="tel:0097124974010" class="contact-no"><!--<i class="fa fa-phone" aria-hidden="true"></i> &nbsp;--> 0097124974010</a> &nbsp; Or &nbsp; 
                                     <a href="javascript:void(0);" class="book-btn-2" data-toggle="modal" data-target="#book_now_modal">Book Now</a>
                                     <div class="book-date-text">
                                         <span>Mon-Fri -</span> 10am - 12pm   <span>Sat-Sun -</span>  10am - 12pm 

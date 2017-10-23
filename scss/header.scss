@@ -123,7 +123,7 @@ header{
 				border: 0px;
 				box-shadow: inherit;
 				@include media-max(767px){
-					position: fixed !important;
+					max-width: 98px;
 				
 				}
 				li{

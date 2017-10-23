@@ -32,79 +32,6 @@
                                                         
                                                     </div> -->
                                                     <div class="col-md-12">
-                                                        <h4 class="header-4">Leanna Abdelmaged</h4>
-                                                        <div class="rattings">
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-
-                                                        </div>
-                                                        <p class="p-text-1">
-                                                            The food was fresh and prepared well. The chef greeted us at the table and was kind enough to give us background on the ingredients and recipes. The wait staff was extremely pleasant and attentive. The atmosphere is great as it wasn't terribly crowded and no blurring music. Lastly, I find the prices very reasonable for the huge portions. I highly recommend this restaurant.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="testimonial-box">
-                                                <div class="row">
-                                                   
-                                                    <div class="col-md-12">
-                                                        <h4 class="header-4">Maya Cheaib</h4>
-                                                        <div class="rattings">
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
-                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
-                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
-                                                            </svg>
-
-                                                        </div>
-                                                        <p class="p-text-1">
-                                                           One of my favorite restaurants in Abu dhabi. Whenever I invite people, the restaurant will never fail me.I am always pleased with the service and the quality of food that is always customized to meet any need. The chef is very creative and everytime I visit the restaurant I would have the chance to try something new. It is must to try: the risotto ( my favorites the vegetable, spinach and the seafood risotto), the burrata, the CHOCOLATE FONDANT which tastes like heaven, the vegetable pizza, the mocktails (my favorites rossini and bellini), the grilled seafood selection, the risotto with edible gold and truffle,etc.. The restaurant gave me a chance to throw several events in their private rooms (baby shower, graduation, birthdays, and bridal shower) I can guarantee that you will have the best meals and experience of your life. Thank you MANGIAMO.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="testimonial-box">
-                                                <div class="row">
-                                                   
-                                                    <div class="col-md-12">
                                                         <h4 class="header-4">Jenny Parsons</h4>
                                                         <div class="rattings">
                                                             <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
@@ -130,7 +57,80 @@
 
                                                         </div>
                                                         <p class="p-text-1">
-                                                          Oh my word...the best food in Abu Dhabi! The staff are so warm and friendly. Everything was fresh and SO delicious. The pasta melted in my mouth , I thought I had no room for desert till it arrived!!! Home made chocolate fondant..to die for. Well done chef!
+                                                           Oh, my word...the best food in Abu Dhabi! The staff are so warm and friendly. Everything was fresh and SO delicious. The pasta melted in my mouth, I thought I had no room for desert till it arrived!!! Homemade chocolate fondant. To die for.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="testimonial-box">
+                                                <div class="row">
+                                                   
+                                                    <div class="col-md-12">
+                                                        <h4 class="header-4">Riya Castro</h4>
+                                                        <div class="rattings">
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+
+                                                        </div>
+                                                        <p class="p-text-1">
+                                                           The best taste ever! Their Hawaiian pizza OH My! I really enjoyed every bit of a bite Piece by piece of dynamite shrimps are so yummy, waitresses and waiters are friendly I Salute their CHEFS for their almost perfect taste!  I really feel at home.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="testimonial-box">
+                                                <div class="row">
+                                                   
+                                                    <div class="col-md-12">
+                                                        <h4 class="header-4">Brenda Kirkland</h4>
+                                                        <div class="rattings">
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+                                                            <svg class="ratting rated" xmlns="" width="19.875" height="20" viewBox="0 0 19.875 20">
+                                                                <circle class="rcircle" cx="9.938" cy="10" r="8.438"/>
+                                                              <ellipse class="rdot" cx="9.938" cy="10.005" rx="2.625" ry="2.625"/>
+                                                            </svg>
+
+                                                        </div>
+                                                        <p class="p-text-1">
+                                                          fantastic experience. Had a birthday dinner here and the chef came out to the table himself to talk us through the menu and ingredients. Had gluten free options, mocktails, amazing risotto, and the burrata is to die for. Not crowded, well priced.
                                                         </p>
                                                     </div>
                                                 </div>

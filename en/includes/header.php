@@ -55,7 +55,7 @@ $site_url.="en/";
                     </div>
                 </div>
                 <div class="col-md-2 call-now">
-                    <i class="fa fa-phone" aria-hidden="true"></i> Call Now :  <a href="tel:097124974010">097124974010</a>
+                    <i class="fa fa-phone" aria-hidden="true"></i> Call Now :  <a href="tel:0097124974010">0097124974010</a>
                     
                 </div>
                 <div class="col-md-4 right-bar">

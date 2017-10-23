@@ -72,7 +72,7 @@
                         </div>
 
     
-                     <a href="menu.php" class="view-more-btn">View More</a>
+                     <a href="menu.php" class="view-more-btn">مشاهدة المزيد</a>
                 </div>
                 <div class="col-md-1">&nbsp;</div>
             </div>

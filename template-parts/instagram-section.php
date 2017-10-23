@@ -12,27 +12,20 @@
                         <p class="p-text-1">
                             تابعوا حسابنا على الانستقرام حتى تبقوا على علم دائم بآخر أطباقنا الشهية
                         </p>
+                       
+                
                         <div class="row instra-images">
+                            <?php  foreach ($result_ins->data as $post) { 
+                            //$post->likes->count
+                            //standard_resolution
+                            //thumbnail
+                            ?>
                             <div class="col-md-3 col-xs-6">
                                 <div class="instra-img-show">
-                                    <a href="#"><img src="img/instra-img.jpg"></a>
+                                    <a href="<?php echo $post->link;?>" target="_blank"><img src="<?php echo $post->images->standard_resolution->url;?>"></a>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6">
-                                <div class="instra-img-show">
-                                    <a href="#"><img src="img/instra-img.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-xs-6">
-                                <div class="instra-img-show">
-                                   <a href="#"><img src="img/instra-img.jpg"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-xs-6">
-                                <div class="instra-img-show">
-                                   <a href="#"><img src="img/instra-img.jpg"></a>
-                                </div>
-                            </div>
+                            <?php }?>
                         </div>
                     </div>
                 </div>

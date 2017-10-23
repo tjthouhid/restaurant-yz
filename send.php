@@ -22,19 +22,19 @@
 			<div>
 				<table style='width:100%;'>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>الاسم : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;'>الاسم : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$name."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>رقم الهاتف : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;'>رقم الهاتف : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$number."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>تاريخ الحجز : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;'>تاريخ الحجز : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$date."</td>
 					</tr>
 					<tr>
-						<th style='border-bottom: 2px solid #ab3535;padding: 10px;    unicode-bidi: bidi-override !important;'>عدد الحاضرين : </th>
+						<th style='border-bottom: 2px solid #ab3535;padding: 10px;'>عدد الحاضرين : </th>
 						<td style='border-bottom: 2px solid #ab3535;padding: 10px;'>".$person."</td>
 					</tr>
 					<tr>

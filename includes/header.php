@@ -54,7 +54,7 @@ include "functions/common.php";
                     </div>
                 </div>
                 <div class="col-md-2 call-now">
-                    <i class="fa fa-phone" aria-hidden="true"></i> اتصل الآن :  <a href="tel:097124974010">097124974010</a>
+                    <i class="fa fa-phone" aria-hidden="true"></i> اتصل الآن :  <a href="tel:0097124974010">0097124974010</a>
                     
                 </div>
                 <div class="col-md-4 right-bar">

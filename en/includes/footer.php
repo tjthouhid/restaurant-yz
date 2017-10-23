@@ -9,7 +9,7 @@
     <!-- ******************************************************* -->
     <footer>
         
-            <div class="row">
+            <div class="row fix">
                 <div class="col-md-12">
                     <div class="social-icon">
                         <ul>

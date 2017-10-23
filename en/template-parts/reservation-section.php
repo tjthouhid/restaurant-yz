@@ -14,7 +14,7 @@
                         </p>
                         </div>
                         <div class="reserv_div_text_2">
-                            <a href="tel:097124974010" class="contact-no"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; 097124974010</a> &nbsp; Or
+                            <a href="tel:0097124974010" class="contact-no"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; 0097124974010</a> &nbsp; Or
                             <br>
                             <a href="#" class="book-btn-2" data-toggle="modal" data-target="#book_now_modal">Book Now</a>
                             <div class="book-date-text">
