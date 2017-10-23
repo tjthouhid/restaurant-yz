@@ -12,7 +12,7 @@
   //https://api.instagram.com/oauth/authorize/?client_id=49e4c2e4e35042dd832bdf68705afd15&redirect_uri=http://localhost/retaurant-yz/getinstra.php&response_type=token&scope=basic+public_content+follower_list+comments+relationships+likes
   //token == 1403537611.49e4c2e.049b51da3bfb4f42ab9301eab610b6d7
   $result = fetchData("https://api.instagram.com/v1/users/self/media/recent?access_token=1403537611.49e4c2e.049b51da3bfb4f42ab9301eab610b6d7&count=3");
-  //https://api.instagram.com/v1/users/self/media/recent?access_token=1403537611.49e4c2e.049b51da3bfb4f42ab9301eab610b6d7&count=3
+  //https://api.instagram.com/v1/users/self/media/recent?access_token=1403537611.49e4c2e.049b51da3bfb4f42ab9301eab610b6d7&count=3 // mine tjs
   print_r($result);
   exit;
   $result = json_decode($result);
@@ -27,4 +27,5 @@
    echo "Link : ". $post->link;
    echo "<hr>";
   }
+  // mgniamo 1365192628.6ff8366.8d75a27924054cb4bbc66b14cbc7b1d5
 ?>

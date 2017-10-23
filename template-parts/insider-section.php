@@ -26,21 +26,21 @@
                            <div class="item active">
                                 <div class="slider-content">
                                     <img src="img/im1.jpg">
-                                    <h5 class="header-5">Kitchen</h5>
+                                    <!-- <h5 class="header-5">Kitchen</h5> -->
                                 </div>
                                
                            </div>
                            <div class="item">
                                 <div class="slider-content">
                                     <img src="img/im2.jpg">
-                                    <h5 class="header-5">Dining</h5>
+                                    <!-- <h5 class="header-5">Dining</h5> -->
                                 </div>
                                
                            </div>
                            <div class="item">
                                 <div class="slider-content">
                                     <img src="img/im3.jpg">
-                                    <h5 class="header-5">Hotel</h5>
+                                   <!--  <h5 class="header-5">Hotel</h5> -->
                                 </div>
                                
                            </div>

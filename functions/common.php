@@ -24,8 +24,7 @@ function fetchData($url){
   curl_close($ch);
   return $result;
 }
-$result_ins = fetchData("https://api.instagram.com/v1/users/self/media/recent?access_token=1403537611.49e4c2e.049b51da3bfb4f42ab9301eab610b6d7&count=4");
-
+$result_ins = fetchData("https://api.instagram.com/v1/users/self/media/recent?access_token=1365192628.6ff8366.8d75a27924054cb4bbc66b14cbc7b1d5&count=4");
 $result_ins = json_decode($result_ins);
 $current_url=get_current_path();
 $site_url=get_server_url(ENVR);

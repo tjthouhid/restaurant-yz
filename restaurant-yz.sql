@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 22, 2017 at 01:28 AM
+-- Generation Time: Oct 23, 2017 at 09:10 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -44,7 +44,7 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id`, `slug`, `english`, `arabic`, `img`, `is_img`) VALUES
 (1, 'the-breakfast', 'THE BREAKFAST', 'الإفطار', 'brekfast-pancake.jpg', '1'),
 (2, 'cold-appetizers-and-salads', 'Cold Appetizers And Salads', 'المقبلات الباردة والسلطات', 'cold-apitizer.jpg', '1'),
-(3, 'charcoal-grills\r\n', 'CHARCOAL GRILLS', 'مشاوي على الفحم', 'charcoal-chicken.jpg', '1'),
+(3, 'charcoal-grills', 'CHARCOAL GRILLS', 'مشاوي على الفحم', 'charcoal-chicken.jpg', '1'),
 (4, 'our-special-dishes', 'OUR SPECIAL DISHES', 'اطباقنا المميزة', 'special-dish.jpg', '1'),
 (5, 'from-our-fishermans-wraf', 'FROM OUR FISHERMANS WRAF', 'الاسماك والمأكولات البحرية', 'fisherman.jpg', '1'),
 (6, 'pasta-and-pizza', 'PASTA AND PIZZA', 'بيتزا وباستا', 'pizza.jpg', '1'),
@@ -52,7 +52,10 @@ INSERT INTO `category` (`id`, `slug`, `english`, `arabic`, `img`, `is_img`) VALU
 (8, 'hot-appetizers', 'HOT APPETIZERS', 'مقبلات ساخنة', '', '0'),
 (9, 'sides', 'SIDES', 'الاطباق الجانبية', '', '0'),
 (10, 'desserts', 'DESSERTS', 'الحلويات', '', '0'),
-(11, 'freshly-squeed-juice', 'FRESHLY SQUEED JUICE', 'العصائر الطازجة', '', '0');
+(11, 'the-shaken', 'THE SHAKEN', 'الشيك', '', '0'),
+(12, 'freshly-squeed-juice', 'FRESHLY SQUEED JUICE', 'العصائر الطازجة', '', '0'),
+(13, 'hot-beverages', 'HOT BEVERAGES', 'المشروبات الساخنة', '', '0'),
+(14, 'chilled-beverage-selection', 'CHILLED BEVERAGE SELECTION', 'المشروبات الباردة', '', '0');
 
 -- --------------------------------------------------------
 
@@ -95,7 +98,7 @@ INSERT INTO `foods` (`id`, `cat_id`, `title_en`, `detail_en`, `title`, `detail`,
 (17, 2, 'Caesar Salad ( chicken or Shrimps )', 'Roman lettuce topped with parmesan and croutons with our chef\'s speacial dressing with your choice of grilled chicken or shrimps', 'سلطة السيزر مع الدجاج او الروبيان', 'خس روماني , جبنة بارميزان وقطع الخبز المحمر مع خلطة مميزة من التوابل واختيارك : الدجاج المشوي او الروبيان\r\n', '42 AED', ''),
 (18, 2, 'Hummus', 'Puree of chickpeas mixed with tahini and lemon juice using our special spices', 'حمص', 'حمص مع الطحينة وعصير الليمون بالإضافة الى خلطة التوابل المميزة', '26 AED', ''),
 (19, 2, 'Mutabbal', 'Mashed char grilled eggplant blended with tahini and lemon juice', 'متبل', 'باذنجان مشوي مطحون مع الطحينية وعصير الليمون\r\n', '26 AED', ''),
-(20, 2, 'Vine Leaves', 'Vine leaves stuffed with a blend of rice , tomatoand spices', 'ق عنب بالزيت', 'ورق عنب محشي بالأرز والبندورة مع خليط من التوابل\r\n', '28 AED', 'vine-leaves.jpg'),
+(20, 2, 'Vine Leaves', 'Vine leaves stuffed with a blend of rice , tomatoand spices', 'ورق عنب بالزيت', 'ورق عنب محشي بالأرز والبندورة مع خليط من التوابل\r\n', '28 AED', 'vine-leaves.jpg'),
 (21, 3, 'Arayes', 'Pita bread stuffed with grilled spiced minced lamb', 'عرايس', 'خبز محشو بلحم الغنم المفروم والغني بالتوابل', '46 AED', 'arayes.jpg'),
 (22, 3, 'Half Grilled Chicken', 'Half grilled chicken in our special marinade served with french fries and grilled tomatoes', 'نصف دجاجة مشوية', 'نصف دجاجة مشوية مشبعة بالتوابل تقدم مع البطاطا المقلية وشرحات من الطماطم المشوية', '51 AED', 'half-grilled-chicken.jpg'),
 (23, 3, 'Shish Tawouk', 'Marinated grilled chicken cubes served with French fries', 'شيش طاووق', 'قطع متبلة من الدجاج المشوي تقدم مع البطاطا المقلية', '59 AED', 'shish-tawouk.jpg'),
@@ -105,21 +108,21 @@ INSERT INTO `foods` (`id`, `cat_id`, `title_en`, `detail_en`, `title`, `detail`,
 (27, 3, 'Mix Seafood Grill', 'A mix of grilled shrimps , hamour fish and crab meat baked with Mozzarella cheese and served with avocado, peppers and tomato', 'طبق من ثمار البحر المشكل', 'طبق مشكل من مشاوي الروبيان , سمك الهامور , السلطعون مخبوز مع جبنة الموزاريلا يقدم مع الافوكادو , الفلفل والطماطم.', '', ''),
 (28, 4, 'Biryani ( Lamp or Chicken )', 'Saffron flavored Basmati rice mixed with exoric indian spices with the choice of boiled spieces of juicy lamb or tender pieces of chicken', 'برياني دجاج او لحم', 'أرز بسمتي بالزعفران مع خلطة مميزة من التوابل يقدم مع لحم الغنم اللين أو قطع الدجاج', '45 AED', ''),
 (29, 4, 'Shrimp Biryani', 'Saffron flevored Basmati rice mixed with exotic indian spices with cooked tiger shrimps', 'برياني الروبيان', 'أرز بسمتي بالزعفران مع خلطة مميزة من التوابل مع الروبيان', '58 AED', ''),
-(30, 4, 'Chicken Escalope', 'Breaded fried chicken breast served with vegetables and potato wedges', 'سكالوب دجاج:', 'صدر دجاج مقلي ومغطى بكعك الخبز المطحون يقدم مع الخضار والبطاطا المقلية', '62 AED', 'chicken-escalope.jpg'),
+(30, 4, 'Chicken Escalope', 'Breaded fried chicken breast served with vegetables and potato wedges', 'سكالوب دجاج', 'صدر دجاج مقلي ومغطى بكعك الخبز المطحون يقدم مع الخضار والبطاطا المقلية', '62 AED', 'chicken-escalope.jpg'),
 (31, 4, 'Roasted Lamb', 'Oven roasted lamb on oriental rice and nuts served with plain yogurt', 'خروف محشي', 'لحم خروف مشوي ومحشي بالارز والمكسرات , يقدم مع لبن .', '72 AED', 'roasted-lamb.jpg'),
 (32, 4, 'Wagyu Steak', 'Grilled Wagyu beef steak topped with green peppercon sauce', 'لحم الواغيو', 'لحم عجل الواغيو مع صلصة الفلفل الاخضر .', '135 AED', 'wagyu-steak.jpg'),
 (33, 5, 'Grilled wild salmon fillet', 'Grilled wild salmon fillet served with lemon butter sauce and mashed potato', 'فيليه سمك السلمون المشوي', 'فيليه سمك السلمون المشوي مع صلصة الليمون بالزبدة يقدم مع البطاطا المهروسة', '68 AED', 'grilled-wild-salmon-fillet.jpg'),
 (34, 5, 'Grilled Shrimps', 'Marinated grilled tiger shrimps topped with lemon butter sauce served with rice and vegetables', 'روبيان مشوي', 'روبيان متبل ومشوي على الفحم مع صلصة الليمون بالزبدة يقدم مع الارز والخضار', '92 AED', 'grilled-shrimps.jpg'),
 (35, 6, 'Chicken Piccato Milanese', 'Pan-fried chicken breast layered with crispy parmesan crust on a bed of spaghetti tossed with tomato and Italian herbs', 'دجاج بيكاتا ميلانيز', 'صدر دجاج مقلي مقرمش بجبنة البارميزان ويقدم مع السباغيتي وصلصة الطماطم بالاعشاب الايطالية', '63 AED', ''),
 (36, 6, 'Meat Lasagna', 'Lasagna pasta layered with Bolognese sauce and bechamel baked with Mozzarella and Parmesan cheese', 'لازانيا باللحم', 'طبقات من باستا اللازانيا مع صلصتي الطماطم باللحم المفروم والبشاميل مخبوزة مع جبنة الموزاريلا والبارميزان', '62 AED', ''),
-(37, 6, 'Margherita', 'Thin crusted oven baked pizza topped with homemade tomato sauce and Mozzarella cheese', 'مارغريتا:', 'عجينة البيتزا الرقيقة بالفرن مع صلصة الطماطم وجبنة الموزاريلا', '45 AED', 'margherita.jpg'),
+(37, 6, 'Margherita', 'Thin crusted oven baked pizza topped with homemade tomato sauce and Mozzarella cheese', 'مارغريتا', 'عجينة البيتزا الرقيقة بالفرن مع صلصة الطماطم وجبنة الموزاريلا', '45 AED', 'margherita.jpg'),
 (38, 6, 'Vegi Pizza', 'Thin crusted oven baked Pizza with tomato sauce  and Mozzarella cheese topped with green bell pepper, tomato, onion , mushrooms, avocado , eggplant and zucchini with a sprinkle of oregano\r\n', 'بيتزا بالخضار', 'عجينة البيتزا الرقيقة بالفرن مع صلصة الطماطم وجبنة الموزاريلا مزينة بالفلفل الأخضر , الطماطم , البصل , الأفوكادو , الباذنجان والكوسا مع الاريجانو', '47 AED', 'vegi-pizza.jpg'),
 (39, 6, 'Chicken Pizza', 'Chicken strips cooked with tomato, peppers and mushrooms topped  with olives and mozzarella cheese', 'بيتزا الدجاج', 'شرائح دجاج مع الطماطم, الفلفل والفطر مزينة بالزيتون وجبنة الموزاريلا', '49 AED', ''),
 (40, 7, 'Lentil Soup', 'Yellow lentil simmered and blended with onion and garlic, served croutons and lemon slices', 'شوربة عدس', 'عدس أصفر مطحون مع البصل والثوم , يقدم مع الخبز المقلي المقرمش وشرائح الليمون', '28 AED', ''),
 (41, 7, 'Creamy Chicken Soup', 'A creany blend of chicken cooked with fresh cream', 'شوربة الدجاج بالكريمة', 'خليط الدجاج المطهو مع الكريمة الطازجة', '32 AED', 'creamy-chicken-soup.jpg'),
 (42, 7, 'Vegetable Soup', 'A rich mix of freshly cooked vegetables with cream and cheese topped with croutons', 'شوربة الخضار', 'خليط غني بخضار الموسم المطبوخة والممزوجة بالكريمة والجبنة ,يقدم مع شرائح من الخبز المحمر', '28 AED', ''),
 (43, 7, 'Mashroom Soup', 'A mix of cooked mushrooms and onions blend and served with cheese and crouton', 'شوربة الفطر', 'مزيج مطحون من الفطر المطبوخ مع البصل يقدم مع الجبنة وشرائح الخبز المحمر', '34 AED', ''),
-(44, 8, 'Hummus Meat', 'Puree of chickpeas topped with ground lamb meat and fried pine nuts in olive oil', 'ص باللحمة', 'حمص يقدم مع لحم الغنم المفروم والصنوبر المقلي مع زيت الزيتون', '36 AED', 'hummas-meat.jpg'),
+(44, 8, 'Hummus Meat', 'Puree of chickpeas topped with ground lamb meat and fried pine nuts in olive oil', 'حمص باللحمة', 'حمص يقدم مع لحم الغنم المفروم والصنوبر المقلي مع زيت الزيتون', '36 AED', 'hummas-meat.jpg'),
 (45, 8, 'Pan Sauteed beef', 'strips of beef cooked with pepper and tomato', 'قلاية اللحمة', 'شرائح لحم العجل مع الفلفل والطماطم', '36 AED', 'pan-sauteed-beef.jpg'),
 (46, 8, 'Dynamite Shrimps', 'Fried tiger shrimps served on a bed of lettuce topped with our dynamite chili sauce', 'ديناميت الروبيان', 'روبيان مقلي يقدم مع الخس وصلصة الديناميت الحارة', '52 AED', ''),
 (47, 8, 'Mix Fatayer', 'Mixed Arabic fried pastries filled with spinach , meat or cheese', 'فطاير مشكلة', 'فطاير مقلية مشكلة محشوة بالسبانخ , اللحم أو الجبنة', '36 AED', ''),
@@ -134,7 +137,42 @@ INSERT INTO `foods` (`id`, `cat_id`, `title_en`, `detail_en`, `title`, `detail`,
 (56, 10, 'Umm Ali', 'Arabic pudding dessert baked with puff pastry in sweetened cream topped with nuts and raisins\r\n\r\n\r\n', 'ام علي', 'حلوى البودينغ العربية المشبعة بالكريمة والمخبوزة بعجينة البف باستري الهشة مزينة بالمكسرات والزبيب', '32 AED', ''),
 (57, 10, 'Kunafa', 'Lebanese stretchy white cheese covered in a crispy pastry cryst and soaked in sweet sugary syrup', 'كنافة', 'حلوى الكنافة اللبنانية مكونة من جبنة العكاوي الذائبة المغطاة بعجينة من السميد ومشبعة بالقطر', '34 AED', 'kunafa.jpg'),
 (58, 10, 'Chocolate Blast', 'Warm lava cake with dewy center topped with chocolate sauce', 'شوكولاتة بليست', 'كيك سائل وطري الوسط تضاف عليه صلصة الشوكولاتة', '42 AED', ''),
-(59, 10, 'Arabic Ice Cream with angel hair', 'Arabic ice cream topped with strands of angel hair and delicious fruit', 'بوظة عربية مع غزل البنات', 'بوظة عربية مزينة بخيوط غزل البنات والفواكه الشهية', '42 AED', '');
+(59, 10, 'Arabic Ice Cream with angel hair', 'Arabic ice cream topped with strands of angel hair and delicious fruit', 'بوظة عربية مع غزل البنات', 'بوظة عربية مزينة بخيوط غزل البنات والفواكه الشهية', '42 AED', ''),
+(60, 11, 'NutellaChino', 'our signature Nutella chocolate', 'نوتيلاتشينو', 'وصفتنا الخاصة بشيك النوتيلا', '', ''),
+(61, 11, 'Ice Creamy Espresso', 'Chilled Espresso', 'ايس كريمي اسبرسو', 'الاسبرسو المثلج\r\n', '', ''),
+(62, 11, 'Chocolate Milk shake', 'Ferrero Chocolate OR Nutella', 'ميلك شيك شوكولاتة', 'شوكولاتة فيريرو روشيه ونوتيلا', '', ''),
+(63, 11, 'Vailla Milk Shake', 'Snickers Chocolate in Vanilla', 'ميلك شيك فانيليا', 'شوكولاتة سنيكرز بالفانيلا', '', ''),
+(64, 11, 'Oreo Milk Shake', 'Oreo Biscuit ,  Vanilla Ice Cream, chocolate Syrup, Milk', 'أوريو ميلك شيك', 'بسكويت الاوريو , آيس كريم الفانيليا , مركز الشوكولاتة والحليب', '', ''),
+(65, 12, 'Orange', '', 'برتقال', '', '', ''),
+(66, 12, 'Carrot', '', 'جزر', '', '', ''),
+(67, 12, 'Magic Mango', '', 'ماجيك مانجا', '', '', ''),
+(68, 12, 'Green apple', '', 'تفاح أخضر', '', '', ''),
+(69, 12, 'Charlie Temple ( Pomegranate )', '', 'شيرلي تمبل ( رمان )', '', '', ''),
+(70, 12, 'Avocado', '', 'أفوكادو', '', '', ''),
+(71, 12, 'Strawberry', '', 'فراولة', '', '', ''),
+(72, 12, 'Pineapple', '', 'أناناس', '', '', ''),
+(73, 12, 'Lemon', '', 'ليمون', '', '', ''),
+(74, 12, 'Lemon With Mint', '', 'ليمون مع نعناع', '', '', ''),
+(75, 12, 'Watermelon', '', 'بطيخ', '', '', ''),
+(76, 12, 'Fruit Cocktail', '', 'عصير كوكتيل', '', '', ''),
+(77, 13, 'Karak Chai', '', 'شاي كرك', '', '', ''),
+(78, 13, 'Moroccan Tea', '', 'شاي مغربي', '', '', ''),
+(79, 13, 'Green Tea', '', 'شاي اخضر', '', '', ''),
+(80, 13, 'Tea with Milk', '', 'شاي مع الحليب', '', '', ''),
+(81, 13, 'Turkish Coffee', '', 'قهوة تركية', '', '', ''),
+(82, 13, 'American Coffee', '', 'قهوة أميركية', '', '', ''),
+(83, 13, 'Cafe Latte', '', 'قهوة بالحليب', '', '', ''),
+(84, 13, 'White horse latte', '', 'وايت هورس لاتيه', '', '', ''),
+(85, 13, 'Cappuccino', '', 'كابتشينو', '', '', ''),
+(86, 13, 'Espresso', '', 'إسبرسو', '', '', ''),
+(87, 14, 'Iced Tea', '', 'شاي مثلج', '', '', ''),
+(88, 14, 'Lemon Iced Tea', '', 'شاي مثلج بالليمون', '', '', ''),
+(101, 14, 'Iced Coffee', '', 'قهوة مثلجة', '', '', ''),
+(102, 14, 'Al Ain sparking water -750ML', '', 'مياه غازية العين 750 مللتر', '', '', ''),
+(103, 14, 'Al Ain Sparking water- 330ML', '', 'مياه غازية العين 330 مللتر', '', '', ''),
+(104, 14, 'Al Ain Water - 750ML', '', 'مياه معدنية العين 750 مللتر', '', '', ''),
+(105, 14, 'Al Ain Water -330ML', '', 'مياه معدنية العين 330 مللتر', '', '', ''),
+(106, 14, 'Arwa Water ( Small )', '', 'مياه أروى صغيرة', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -161,13 +199,13 @@ ALTER TABLE `foods`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `foods`
 --
 ALTER TABLE `foods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- Constraints for dumped tables
